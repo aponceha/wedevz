@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS wedevz_db;
+
+CREATE DATABASE wedevz_db;
