@@ -9,9 +9,9 @@ User.hasMany(Project, {
 Project.belongsTo(User, {
   foreignKey: 'project_id',
 });
-// Many to Many user to technology
+// Many to Many - user to technology
 
-User.hasMany(Technology, {
+User.belongsToMany(Technology, {
     foreignKey: 'technology_id',
   });
   
@@ -19,13 +19,13 @@ Technology.belongsToMany(User, {
     foreignKey: 'technology_id',
   });
 
-// Many to Many Project to technology
+// Many to Many - Project to technology
 
-Project.hasMany(Technology, {
+Project.belongToMany(Technology, {
     foreignKey: 'technology_id',
   });
   
-Technology.belongsTo(Project, {
+Technology.belongsToMany(Project, {
     foreignKey: 'technology_id',
   });
 
