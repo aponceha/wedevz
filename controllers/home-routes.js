@@ -1,18 +1,26 @@
-const router = require('express').Router();
-
+const router = require("express").Router();
 
 // Render login page
-res.render("login");
-
+router.get("/login", function (req, res) {
+  res.render("login");
+});
 
 // Render signup page
-res.render("signup");
+router.get("/signup", function (req, res) {
+  res.render("signup");
+});
 
 // Render profile page
-res.render("profile");
+router.get("/profile", function (req, res) {
+  res.render("profile");
+});
 
 // Render edit page
-res.render("edit");
+router.get("/edit", function (req, res) {
+  res.render("edit");
+});
 
 // Render explore page
-res.render("explore");
+router.get("/explore", function (req, res) {
+  res.render("explore");
+});
