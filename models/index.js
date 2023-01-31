@@ -12,21 +12,21 @@ Project.belongsTo(User, {
 // Many to Many - user to technology
 
 User.belongsToMany(Technology, {
-    foreignKey: 'technology_id',
+    through: Technology
   });
   
 Technology.belongsToMany(User, {
-    foreignKey: 'technology_id',
+  through: Technology
   });
 
 // Many to Many - Project to technology
 
-Project.belongToMany(Technology, {
-    foreignKey: 'technology_id',
+Project.belongsToMany(Technology, {
+  through: Technology
   });
   
 Technology.belongsToMany(Project, {
-    foreignKey: 'technology_id',
+  through: Technology
   });
 
 module.exports = { User, Project, Technology };

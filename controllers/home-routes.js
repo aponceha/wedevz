@@ -1,26 +1,34 @@
-const router = require("express").Router();
+const router = require('express').Router();
+const User = require('../models/User');
+const Project = require('../models/Project');
+const Technology = require('../models/Technology');
+// const cloudinary = require('/utils/cloudinary');
+
+// Cloudinary upload
+
+
+
+
+
+
+
+
+
+
+
 
 // Render login page
-router.get("/login", function (req, res) {
-  res.render("login");
-});
+res.render("login");
+
 
 // Render signup page
-router.get("/signup", function (req, res) {
-  res.render("signup");
-});
+res.render("signup");
 
 // Render profile page
-router.get("/profile", function (req, res) {
-  res.render("profile");
-});
+res.render("profile");
 
 // Render edit page
-router.get("/edit", function (req, res) {
-  res.render("edit");
-});
+res.render("edit");
 
 // Render explore page
-router.get("/explore", function (req, res) {
-  res.render("explore");
-});
+res.render("explore");
