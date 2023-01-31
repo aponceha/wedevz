@@ -32,6 +32,71 @@ User.init(
         len: [6],
       },
     },
+    first_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1],
+      },
+    },
+    last_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1],
+      },
+    },
+    dob: {
+      type: DataTypes.DATEONLY,
+      allowNull: false,
+      validate: {
+        isDate: true,
+      },
+    },
+    city: {
+      type: DataTypes.STRING,
+      validate: {
+        len: [1],
+      },
+    },
+    stateprovince: {
+      type: DataTypes.STRING,
+      validate: {
+        len: [2],
+      },
+    },
+    userpic: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          len: [1],
+
+      },
+    },
+    employer: {
+      type: DataTypes.STRING,
+      validate: {
+        len: [1],
+      },
+    },
+    job_title: {
+      type: DataTypes.STRING,
+      validate: {
+        len: [1],
+      },
+    },
+    bio: {
+      type: DataTypes.TEXT('long'),
+      validate: {
+        len: [1],
+      },
+    },
+    github: {
+      type: DataTypes.STRING,
+      validate: {
+        len: [1],
+      },
+    },
   },
   {
     hooks: {
