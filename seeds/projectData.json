@@ -1,0 +1,47 @@
+[
+   {
+      "id": 1,
+      "name": "Day Planner",
+      "description": "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
+      "link": "github/cparsons/dayplanner.com",
+      "user_id": "4",
+      "technology": ["Javascript", "HTML", "CSS"],
+
+   },
+   {
+      "id": 2,
+      "name": "Porfolio Website",
+      "description": "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
+      "link": "github/cparsons/dayplanner.com",
+      "user_id": "4",
+      "technology": ["Javascript", "HTML", "CSS"],
+
+   },
+   {
+      "id": 3,
+      "name": "Calculator App",
+      "description": "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
+      "link": "github/cparsons/dayplanner.com",
+      "user_id": "4",
+      "technology": ["Javascript", "HTML", "CSS"],
+
+   },
+   {
+      "id": 4,
+      "name": "Note Taker",
+      "description": "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
+      "link": "github/cparsons/dayplanner.com",
+      "user_id": "4",
+      "technology": ["Javascript", "HTML", "CSS"],
+
+   },
+   {
+      "id": 5,
+      "name": "Weaper App",
+      "description": "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
+      "link": "github/cparsons/dayplanner.com",
+      "user_id": "4",
+      "technology": ["Javascript", "HTML", "CSS"],
+
+   },
+   ]
