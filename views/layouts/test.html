@@ -4,6 +4,7 @@
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/public/css/style.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
@@ -22,7 +23,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <body class="w3-black">
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center" style="width:110px;">
   <!-- Avatar image in top left corner -->
   <i class="fa-solid fa-share-nodes" style="display:block; color:white; height: 40px; width: 40px;"></i>
   <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
@@ -59,86 +60,316 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <!-------------------------------------------------------------------------- HB -->
   <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
     <h1 class="w3-jumbo"><span class="w3-hide-small">We</span>Devz</h1>
-    <p>Explore Network</p>
+    <h10>Explore Network</h10>
     <i class="fa-regular fa-square-share-nodes fa-10px" style="color:#68447A; width:100px; height:100px"></i>
   </header>
     <!-------------------------------------------------------------------------- /HB -->
 <!-- CAROUSEL SECTION -->
-  <div class="w3-row-padding" style="display:flex; padding-bottom: 30px; padding-top: 30px; justify-content: center; align-items: center">
-    <button class="w3-button" style="background-color: white; color: black; height:40px" onclick="plusDivs(-1)">&#10094;</button>
-    <div class=" w3-container w3-margin-bottom" style="width:30%; justify-content: center;">
-      <img src="/public/images/p1-modified.png" alt="Norway" style="width:90%" class="w3-hover-opacity">
-      <div class="w3-container w3-white" style="border-radius: 30px;">
-        <p style="font-size:24px"><b>Lauren Cade</b></p>
-        <p style="font-style: italic">Hamilton</p>
-        <p style="font-style: italic">Google</p>
-        <ul style="list-style: none">
-            <li >REACT</li>
-            <li >MongoDB</li>
-            <li >Express</li>
-        </ul>
-        <p>Github Link: lcaddel@github.com</p>
-      </div>
+  <div class="media-scroller media-scroller--with-groups snaps-inline">
+    <div class="media-group">
+        <!-- pic 1 -->
+        <div class="profile-card">
+            <img src="/public/images/p1-modified.png" alt="Norway" class="w3-hover-opacity">
+            <div class="w3-container w3-white" style="border-radius: 30px;">
+              <p style="font-size:24px"><b>Lauren Cade</b></p>
+              <p style="font-style: italic">Hamilton</p>
+              <p style="font-style: italic">Google</p>
+              <ul style="list-style: none">
+                  <li >REACT</li>
+                  <li >MongoDB</li>
+                  <li >Express</li>
+              </ul>
+              <p>Github Link: lcaddel@github.com</p>
+            </div>
+        </div>
+        <!-- pic 2 -->
+        <div class="profile-card" >
+            <img src="/public/images/p4-modified.png" alt="Norway" class="w3-hover-opacity">
+            <div class="w3-container w3-white" style="border-radius: 30px;">
+              <p style="font-size:24px"><b>Santino Russo</b></p>
+              <p style="font-style: italic">Toronto</p>
+              <p style="font-style: italic">Sago Mini</p>
+              <ul style="list-style: none">
+                  <li >REACT</li>
+                  <li >MongoDB</li>
+                  <li >Express</li>
+              </ul>
+              <p>Github Link: s.russo@github.com</p>
+            </div>
+        </div>
+        <!-- pic 3 -->
+        <div class="profile-card">
+            <img src="/public/images/p3-modified.png" alt="Norway" class="w3-hover-opacity">
+            <div class="w3-container w3-white" style="border-radius: 30px;">
+              <p style="font-size:24px"><b>Matt Galanis</b></p>
+              <p style="font-style: italic">Toronto</p>
+              <p style="font-style: italic">Ubisoft</p>
+              <ul style="list-style: none">
+                  <li >REACT</li>
+                  <li >MongoDB</li>
+                  <li >Express</li>
+              </ul>
+              <p>Github Link: mattga@github.com</p>
+            </div>
+          </div>
     </div>
-    <div class="w3-container w3-margin-bottom" style="width:30%" >
-      <img src="/public/images/p4-modified.png" alt="Norway" style="width:90%" class="w3-hover-opacity">
-      <div class="w3-container w3-white" style="border-radius: 30px;">
-        <p style="font-size:24px"><b>Santino Russo</b></p>
-        <p style="font-style: italic">Toronto</p>
-        <p style="font-style: italic">Sago Mini</p>
-        <ul style="list-style: none">
-            <li >REACT</li>
-            <li >MongoDB</li>
-            <li >Express</li>
-        </ul>
-        <p>Github Link: s.russo@github.com</p>
-      </div>
+    <div class="media-group">
+        <div class="profile-card">
+            <img src="/public/images/p20-modified.png" alt="Norway" class="w3-hover-opacity">
+            <div class="w3-container w3-white" style="border-radius: 30px;">
+              <p style="font-size:24px"><b>Lauren Cade</b></p>
+              <p style="font-style: italic">Hamilton</p>
+              <p style="font-style: italic">Google</p>
+              <ul style="list-style: none">
+                  <li >REACT</li>
+                  <li >MongoDB</li>
+                  <li >Express</li>
+              </ul>
+              <p>Github Link: lcaddel@github.com</p>
+            </div>
+        </div>
+        <!-- pic 2 -->
+        <div class="profile-card" >
+            <img src="/public/images/p5-modified.png" alt="Norway" class="w3-hover-opacity">
+            <div class="w3-container w3-white" style="border-radius: 30px;">
+              <p style="font-size:24px"><b>Santino Russo</b></p>
+              <p style="font-style: italic">Toronto</p>
+              <p style="font-style: italic">Sago Mini</p>
+              <ul style="list-style: none">
+                  <li >REACT</li>
+                  <li >MongoDB</li>
+                  <li >Express</li>
+              </ul>
+              <p>Github Link: s.russo@github.com</p>
+            </div>
+        </div>
+        <!-- pic 3 -->
+        <div class="profile-card">
+            <img src="/public/images/p6-modified.png" alt="Norway" class="w3-hover-opacity">
+            <div class="w3-container w3-white" style="border-radius: 30px;">
+              <p style="font-size:24px"><b>Matt Galanis</b></p>
+              <p style="font-style: italic">Toronto</p>
+              <p style="font-style: italic">Ubisoft</p>
+              <ul style="list-style: none">
+                  <li >REACT</li>
+                  <li >MongoDB</li>
+                  <li >Express</li>
+              </ul>
+              <p>Github Link: mattga@github.com</p>
+            </div>
+          </div>
     </div>
-    <div class="w3-container w3-margin-bottom" style="width:30%">
-      <img src="/public/images/p3-modified.png" alt="Norway" style="width:90%" class="w3-hover-opacity">
-      <div class="w3-container w3-white" style="border-radius: 30px;">
-        <p style="font-size:24px"><b>Matt Galanis</b></p>
-        <p style="font-style: italic">Toronto</p>
-        <p style="font-style: italic">Ubisoft</p>
-        <ul style="list-style: none">
-            <li >REACT</li>
-            <li >MongoDB</li>
-            <li >Express</li>
-        </ul>
-        <p>Github Link: mattga@github.com</p>
-      </div>
+    <div class="media-group">
+        <div class="profile-card">
+            <img src="/public/images/p7-modified.png" alt="Norway" class="w3-hover-opacity">
+            <div class="w3-container w3-white" style="border-radius: 30px;">
+              <p style="font-size:24px"><b>Lauren Cade</b></p>
+              <p style="font-style: italic">Hamilton</p>
+              <p style="font-style: italic">Google</p>
+              <ul style="list-style: none">
+                  <li >REACT</li>
+                  <li >MongoDB</li>
+                  <li >Express</li>
+              </ul>
+              <p>Github Link: lcaddel@github.com</p>
+            </div>
+        </div>
+        <!-- pic 2 -->
+        <div class="profile-card" >
+            <img src="/public/images/p8-modified.png" alt="Norway" class="w3-hover-opacity">
+            <div class="w3-container w3-white" style="border-radius: 30px;">
+              <p style="font-size:24px"><b>Santino Russo</b></p>
+              <p style="font-style: italic">Toronto</p>
+              <p style="font-style: italic">Sago Mini</p>
+              <ul style="list-style: none">
+                  <li >REACT</li>
+                  <li >MongoDB</li>
+                  <li >Express</li>
+              </ul>
+              <p>Github Link: s.russo@github.com</p>
+            </div>
+        </div>
+        <!-- pic 3 -->
+        <div class="profile-card">
+            <img src="/public/images/p9-modified.png" alt="Norway" class="w3-hover-opacity">
+            <div class="w3-container w3-white" style="border-radius: 30px;">
+              <p style="font-size:24px"><b>Matt Galanis</b></p>
+              <p style="font-style: italic">Toronto</p>
+              <p style="font-style: italic">Ubisoft</p>
+              <ul style="list-style: none">
+                  <li >REACT</li>
+                  <li >MongoDB</li>
+                  <li >Express</li>
+              </ul>
+              <p>Github Link: mattga@github.com</p>
+            </div>
+          </div>
     </div>
-    <button class="w3-button" style="background-color: white; color: black" onclick="plusDivs(1)">&#10095;</button>
+    <div class="media-group">
+        <div class="profile-card">
+            <img src="/public/images/p10-modified.png" alt="Norway" class="w3-hover-opacity">
+            <div class="w3-container w3-white" style="border-radius: 30px;">
+              <p style="font-size:24px"><b>Lauren Cade</b></p>
+              <p style="font-style: italic">Hamilton</p>
+              <p style="font-style: italic">Google</p>
+              <ul style="list-style: none">
+                  <li >REACT</li>
+                  <li >MongoDB</li>
+                  <li >Express</li>
+              </ul>
+              <p>Github Link: lcaddel@github.com</p>
+            </div>
+        </div>
+        <!-- pic 2 -->
+        <div class="profile-card">
+            <img src="/public/images/p11-modified.png" alt="Norway" class="w3-hover-opacity">
+            <div class="w3-container w3-white" style="border-radius: 30px;">
+              <p style="font-size:24px"><b>Santino Russo</b></p>
+              <p style="font-style: italic">Toronto</p>
+              <p style="font-style: italic">Sago Mini</p>
+              <ul style="list-style: none">
+                  <li >REACT</li>
+                  <li >MongoDB</li>
+                  <li >Express</li>
+              </ul>
+              <p>Github Link: s.russo@github.com</p>
+            </div>
+        </div>
+        <!-- pic 3 -->
+        <div class="profile-card">
+            <img src="/public/images/p12-modified.png" alt="Norway" class="w3-hover-opacity">
+            <div class="w3-container w3-white" style="border-radius: 30px;">
+              <p style="font-size:24px"><b>Matt Galanis</b></p>
+              <p style="font-style: italic">Toronto</p>
+              <p style="font-style: italic">Ubisoft</p>
+              <ul style="list-style: none">
+                  <li >REACT</li>
+                  <li >MongoDB</li>
+                  <li >Express</li>
+              </ul>
+              <p>Github Link: mattga@github.com</p>
+            </div>
+          </div>
+    </div>
+    <div class="media-group">
+        <div class="profile-card">
+            <img src="/public/images/p13-modified.png" alt="Norway" class="w3-hover-opacity">
+            <div class="w3-container w3-white" style="border-radius: 30px;">
+              <p style="font-size:24px"><b>Lauren Cade</b></p>
+              <p style="font-style: italic">Hamilton</p>
+              <p style="font-style: italic">Google</p>
+              <ul style="list-style: none">
+                  <li >REACT</li>
+                  <li >MongoDB</li>
+                  <li >Express</li>
+              </ul>
+              <p>Github Link: lcaddel@github.com</p>
+            </div>
+        </div>
+        <!-- pic 2 -->
+        <div class="profile-card">
+            <img src="/public/images/p14-modified.png" alt="Norway" class="w3-hover-opacity">
+            <div class="w3-container w3-white" style="border-radius: 30px;">
+              <p style="font-size:24px"><b>Santino Russo</b></p>
+              <p style="font-style: italic">Toronto</p>
+              <p style="font-style: italic">Sago Mini</p>
+              <ul style="list-style: none">
+                  <li >REACT</li>
+                  <li >MongoDB</li>
+                  <li >Express</li>
+              </ul>
+              <p>Github Link: s.russo@github.com</p>
+            </div>
+        </div>
+        <!-- pic 3 -->
+        <div class="profile-card">
+            <img src="/public/images/p15-modified.png" alt="Norway" class="w3-hover-opacity">
+            <div class="w3-container w3-white" style="border-radius: 30px;">
+              <p style="font-size:24px"><b>Matt Galanis</b></p>
+              <p style="font-style: italic">Toronto</p>
+              <p style="font-style: italic">Ubisoft</p>
+              <ul style="list-style: none">
+                  <li >REACT</li>
+                  <li >MongoDB</li>
+                  <li >Express</li>
+              </ul>
+              <p>Github Link: mattga@github.com</p>
+            </div>
+          </div>
+    </div>
+    <div class="media-group">
+        <div class="profile-card">
+            <img src="/public/images/p16-modified.png" alt="Norway" class="w3-hover-opacity">
+            <div class="w3-container w3-white" style="border-radius: 30px;">
+              <p style="font-size:24px"><b>Lauren Cade</b></p>
+              <p style="font-style: italic">Hamilton</p>
+              <p style="font-style: italic">Google</p>
+              <ul style="list-style: none">
+                  <li >REACT</li>
+                  <li >MongoDB</li>
+                  <li >Express</li>
+              </ul>
+              <p>Github Link: lcaddel@github.com</p>
+            </div>
+        </div>
+        <!-- pic 2 -->
+        <div class="profile-card">
+            <img src="/public/images/p17-modified.png" alt="Norway" class="w3-hover-opacity">
+            <div class="w3-container w3-white" style="border-radius: 30px;">
+              <p style="font-size:24px"><b>Santino Russo</b></p>
+              <p style="font-style: italic">Toronto</p>
+              <p style="font-style: italic">Sago Mini</p>
+              <ul style="list-style: none">
+                  <li >REACT</li>
+                  <li >MongoDB</li>
+                  <li >Express</li>
+              </ul>
+              <p>Github Link: s.russo@github.com</p>
+            </div>
+        </div>
+        <!-- pic 3 -->
+        <div class="profile-card">
+            <img src="/public/images/p18-modified.png" alt="Norway" class="w3-hover-opacity">
+            <div class="w3-container w3-white" style="border-radius: 30px;">
+              <p style="font-size:24px"><b>Matt Galanis</b></p>
+              <p style="font-style: italic">Toronto</p>
+              <p style="font-style: italic">Ubisoft</p>
+              <ul style="list-style: none">
+                  <li >REACT</li>
+                  <li >MongoDB</li>
+                  <li >Express</li>
+              </ul>
+              <p>Github Link: mattga@github.com</p>
+            </div>
+          </div>
+    </div>
   </div>
-  
 
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <p>Explore Projects</p>
-    <i class="fa-regular fa-square-share-nodes fa-10px" style="color:#68447A; width:100px; height:100px"></i>
-  </header>
-  <!-- Second Photo Grid-->
-    <div class="w3-row-padding" style="display:flex; justify-content: center; padding-top: 30px; align-items: center;">
-        <button class="w3-button" style="background-color: white; color: black; height:40px" onclick="plusDivs(-1)">&#10094;</button>
-        <!--CARD START -->
-        <div class=" w3-container w3-margin-bottom" style="width:530px; height: 696px; border: rgb(162, 192, 212) 10px solid; border-radius: 30px; margin-left: 15px;">
-            <!-- PROJECT TEXT BOX -->
-            <div class="w3-container w3-white" style="margin-top: 15px; border-radius: 30px;">
+  <h10>Explore Projects</h10>
+
+  <!-- Project Media Scroller -->
+  <div class="media-scroller media-scroller--with-groups snaps-inline project-scroll">
+    <!-- PROJECT 1 -->
+    <div class="media-group">
+        <div class="profile-card">
+        <!-- PROJECT TEXT BOX -->
+            <div class="upper-card w3-container w3-white" style="">
                 <p><b>Project: Day Planner</b></p>
                 <p>Description: App that retreives what time of day, displays in agenda and allows user to write in scheduled meeting and events. </p>
                 <p>Technologies: HTML, CSS, WEB APIs</p>
                 <p>Github Link: asdf@github.com</p>
             </div>
             <!-- BOTTOM HALF CARD DIV -->
-            <div class="w3-container" style="display:inline; justify-content: baseline;">
+            <div class="profile-project-bcard w3-container" style="display:inline;">
                 <!-- IMAGE HALF ROW -->
-                <img src="/public/images/p2-modified.png" alt="Norway" style="width:50%; padding-top: 15px;" class="w3-hover-opacity">
+                <img src="/public/images/p2-modified.png" alt="Norway" class="w3-hover-opacity">
                 <!-- NAME LOCATION FIELDS -->
-                <div style="display:inline-block; padding-left: 5px">
-                    <p style="display:block; padding-top: 15px"><b>Christine P.</b></p>
-                    <p style="display:block; font-style: italic"><b>Toronto</b></p>
+                <div class="name-card" style="display:inline-block;">
+                    <p style="display:block;"><b>Christine P.</b></p>
+                    <p style="display:block;"><b>Toronto</b></p>
                 </div>
                 <!-- Technologies  -->
-                <div class="w3-container w3-white" style="padding-top: 5px; border-radius: 30px;">
+                <div class="tech-card w3-container w3-white">
                     <p> Technologies Specialization</p>
                     <ul>
                         <li>HTML</li>
@@ -150,84 +381,273 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
             <!-- END OF BOTTOM HALF CARD DIV -->
             </div> 
         </div>
-        <!-- END OF CARD -->
-        <div class=" w3-container w3-margin-bottom" style="width:530px; height: 696px; border: rgb(162, 192, 212) 10px solid; border-radius: 30px; margin-left: 15px; margin-right: 15px;">
-            <!-- PROJECT TEXT BOX -->
-            <div class="w3-container w3-white" style="margin-top: 15px; border-radius: 30px;">
+    <!-- END OF PROJECT 2 -->
+        <div class="profile-card">
+            <div class="upper-card w3-container w3-white">
                 <p><b>Project: Weather App</b></p>
                 <p>Description: App that retreives weather data from a 3rd party API and displays forecast for users. Aesthetic Desisgn</p>
                 <p>Technologies: HTML, CSS, 3rd Party APIs</p>
                 <p>Github Link: leena@github.com</p>
             </div>
             <!-- BOTTOM HALF CARD DIV -->
-            <div class="w3-container" style="display:inline; justify-content: baseline;">
+            <div class="profile-project-bcard w3-container" style="display:inline;">
                 <!-- IMAGE HALF ROW -->
-                <img src="/public/images/p5-modified.png" alt="Norway" style="width:50%; padding-top: 15px;" class="w3-hover-opacity">
+                <img src="/public/images/p5-modified.png" alt="Norway" class="w3-hover-opacity">
                 <!-- NAME LOCATION FIELDS -->
-                <div style="display:inline-block; padding-left: 5px">
-                    <p style="display:block; padding-top: 15px"><b>Leena M.</b></p>
-                    <p style="display:block; font-style: italic"><b>Waterloo</b></p>
+                <div class="name-card"style="display:inline-block;">
+                    <p style="display:block;"><b>Leena M.</b></p>
+                    <p style="display:block;"><b>Waterloo</b></p>
                 </div>
                 <!-- Technologies  -->
-                <div class="w3-container w3-white" style="padding-top: 5px; border-radius: 30px;">
+                <div class="tech-card w3-container w3-white">
                     <p> Technologies Specialization</p>
                     <ul>
                         <li>HTML</li>
                         <li>CSS</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="media-group">
+        <div class="profile-card">
+        <!-- PROJECT TEXT BOX -->
+            <div class="upper-card w3-container w3-white" >
+                <p><b>Project: Day Planner</b></p>
+                <p>Description: App that retreives what time of day, displays in agenda and allows user to write in scheduled meeting and events. </p>
+                <p>Technologies: HTML, CSS, WEB APIs</p>
+                <p>Github Link: asdf@github.com</p>
+            </div>
+            <!-- BOTTOM HALF CARD DIV -->
+            <div class="profile-project-bcard w3-container" style="display:inline;">
+                <!-- IMAGE HALF ROW -->
+                <img src="/public/images/p16-modified.png" alt="Norway" class="w3-hover-opacity">
+                <!-- NAME LOCATION FIELDS -->
+                <div class="name-card" style="display:inline-block;">
+                    <p style="display:block;"><b>Christine P.</b></p>
+                    <p style="display:block;"><b>Toronto</b></p>
+                </div>
+                <!-- Technologies  -->
+                <div class="tech-card w3-container w3-white">
+                    <p> Technologies Specialization</p>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
             
             <!-- END OF BOTTOM HALF CARD DIV -->
             </div> 
         </div>
-        
-        <button class="w3-button" style="background-color: white; color: black" onclick="plusDivs(1)">&#10095;</button>
+    <!-- END OF PROJECT 2 -->
+        <div class="profile-card">
+            <div class="upper-card w3-container w3-white" style="">
+                <p><b>Project: Weather App</b></p>
+                <p>Description: App that retreives weather data from a 3rd party API and displays forecast for users. Aesthetic Desisgn</p>
+                <p>Technologies: HTML, CSS, 3rd Party APIs</p>
+                <p>Github Link: leena@github.com</p>
+            </div>
+            <!-- BOTTOM HALF CARD DIV -->
+            <div class="profile-project-bcard w3-container" style="display:inline;">
+                <!-- IMAGE HALF ROW -->
+                <img src="/public/images/p17-modified.png" alt="Norway" class="w3-hover-opacity">
+                <!-- NAME LOCATION FIELDS -->
+                <div class="name-card" style="display:inline-block;">
+                    <p style="display:block;"><b>Leena M.</b></p>
+                    <p style="display:block;"><b>Waterloo</b></p>
+                </div>
+                <!-- Technologies  -->
+                <div class="tech-card w3-container w3-white" style="">
+                    <p> Technologies Specialization</p>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-
-<!-- END of CAROUSEL SECTION -->
-    
-
-  <!-- Contact Section -->
-  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
-    <h2 class="w3-text-light-grey">Contact Me</h2>
-    <hr style="width:200px" class="w3-opacity">
-
-    <div class="w3-section">
-      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Chicago, US</p>
-      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
-      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
-    </div><br>
-    <p>Let's get in touch. Send me a message:</p>
-
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
-      <p>
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </p>
-    </form>
-  <!-- End Contact Section -->
-  </div>
-  
-    <!-- Footer -->
-  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-  <!-- End footer -->
-  </footer>
-
-<!-- END PAGE CONTENT -->
+    <div class="media-group">
+        <div class="profile-card">
+        <!-- PROJECT TEXT BOX -->
+            <div class="upper-card w3-container w3-white">
+                <p><b>Project: Day Planner</b></p>
+                <p>Description: App that retreives what time of day, displays in agenda and allows user to write in scheduled meeting and events. </p>
+                <p>Technologies: HTML, CSS, WEB APIs</p>
+                <p>Github Link: asdf@github.com</p>
+            </div>
+            <!-- BOTTOM HALF CARD DIV -->
+            <div class="profile-project-bcard w3-container" style="display:inline;">
+                <!-- IMAGE HALF ROW -->
+                <img src="/public/images/p11-modified.png" alt="Norway" class="w3-hover-opacity">
+                <!-- NAME LOCATION FIELDS -->
+                <div class= "name-card" style="display:inline-block;">
+                    <p style="display:block"><b>Christine P.</b></p>
+                    <p style="display:block"><b>Toronto</b></p>
+                </div>
+                <!-- Technologies  -->
+                <div class="tech-card w3-container w3-white">
+                    <p> Technologies Specialization</p>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+            
+            <!-- END OF BOTTOM HALF CARD DIV -->
+            </div> 
+        </div>
+    <!-- END OF PROJECT 2 -->
+        <div class="profile-card">
+            <div class="upper-card w3-container w3-white">
+                <p><b>Project: Weather App</b></p>
+                <p>Description: App that retreives weather data from a 3rd party API and displays forecast for users. Aesthetic Desisgn</p>
+                <p>Technologies: HTML, CSS, 3rd Party APIs</p>
+                <p>Github Link: leena@github.com</p>
+            </div>
+            <!-- BOTTOM HALF CARD DIV -->
+            <div class="profile-project-bcard w3-container" style="display:inline;">
+                <!-- IMAGE HALF ROW -->
+                <img src="/public/images/p12-modified.png" alt="Norway" class="w3-hover-opacity">
+                <!-- NAME LOCATION FIELDS -->
+                <div class="name-card"style="display:inline-block;">
+                    <p style="display:block;"><b>Leena M.</b></p>
+                    <p style="display:block;"><b>Waterloo</b></p>
+                </div>
+                <!-- Technologies  -->
+                <div class="tech-card w3-container w3-white">
+                    <p> Technologies Specialization</p>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="media-group">
+        <div class="profile-card">
+        <!-- PROJECT TEXT BOX -->
+            <div class="upper-card w3-container w3-white">
+                <p><b>Project: Day Planner</b></p>
+                <p>Description: App that retreives what time of day, displays in agenda and allows user to write in scheduled meeting and events. </p>
+                <p>Technologies: HTML, CSS, WEB APIs</p>
+                <p>Github Link: asdf@github.com</p>
+            </div>
+            <!-- BOTTOM HALF CARD DIV -->
+            <div class="profile-project-bcard w3-container" style="display:inline;">
+                <!-- IMAGE HALF ROW -->
+                <img src="/public/images/p2-modified.png" alt="Norway" class="w3-hover-opacity">
+                <!-- NAME LOCATION FIELDS -->
+                <div class="name-card"style="display:inline-block;">
+                    <p style="display:block;"><b>Christine P.</b></p>
+                    <p style="display:block;"><b>Toronto</b></p>
+                </div>
+                <!-- Technologies  -->
+                <div class="tech-card w3-container w3-white">
+                    <p> Technologies Specialization</p>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+            
+            <!-- END OF BOTTOM HALF CARD DIV -->
+            </div> 
+        </div>
+    <!-- END OF PROJECT 2 -->
+        <div class="profile-card">
+            <div class="upper-card w3-container w3-white">
+                <p><b>Project: Weather App</b></p>
+                <p>Description: App that retreives weather data from a 3rd party API and displays forecast for users. Aesthetic Desisgn</p>
+                <p>Technologies: HTML, CSS, 3rd Party APIs</p>
+                <p>Github Link: leena@github.com</p>
+            </div>
+            <!-- BOTTOM HALF CARD DIV -->
+            <div class="profile-project-bcard w3-container" style="display:inline;">
+                <!-- IMAGE HALF ROW -->
+                <img src="/public/images/p13-modified.png" alt="Norway" class="w3-hover-opacity">
+                <!-- NAME LOCATION FIELDS -->
+                <div class="name-card"style="display:inline-block;">
+                    <p style="display:block;"><b>Leena M.</b></p>
+                    <p style="display:block;"><b>Waterloo</b></p>
+                </div>
+                <!-- Technologies  -->
+                <div class="tech-card w3-container w3-white">
+                    <p> Technologies Specialization</p>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="media-group">
+        <div class="profile-card">
+        <!-- PROJECT TEXT BOX -->
+            <div class="upper-card w3-container w3-white" style="">
+                <p><b>Project: Day Planner</b></p>
+                <p>Description: App that retreives what time of day, displays in agenda and allows user to write in scheduled meeting and events. </p>
+                <p>Technologies: HTML, CSS, WEB APIs</p>
+                <p>Github Link: asdf@github.com</p>
+            </div>
+            <!-- BOTTOM HALF CARD DIV -->
+            <div class="profile-project-bcard w3-container" style="display:inline;">
+                <!-- IMAGE HALF ROW -->
+                <img src="/public/images/p18-modified.png" alt="Norway" class="w3-hover-opacity">
+                <!-- NAME LOCATION FIELDS -->
+                <div class="name-card" style="display:inline-block;">
+                    <p style="display:block;"><b>Christine P.</b></p>
+                    <p style="display:block;"><b>Toronto</b></p>
+                </div>
+                <!-- Technologies  -->
+                <div class="tech-card w3-container w3-white" style="">
+                    <p> Technologies Specialization</p>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+            
+            <!-- END OF BOTTOM HALF CARD DIV -->
+            </div> 
+        </div>
+    <!-- END OF PROJECT 2 -->
+        <div class="profile-card">
+            <div class="upper-card w3-container w3-white">
+                <p><b>Project: Weather App</b></p>
+                <p>Description: App that retreives weather data from a 3rd party API and displays forecast for users. Aesthetic Desisgn</p>
+                <p>Technologies: HTML, CSS, 3rd Party APIs</p>
+                <p>Github Link: leena@github.com</p>
+            </div>
+            <!-- BOTTOM HALF CARD DIV -->
+            <div class="profile-project-bcard w3-container" style="display:inline;">
+                <!-- IMAGE HALF ROW -->
+                <img src="/public/images/p20-modified.png" alt="Norway" class="w3-hover-opacity">
+                <!-- NAME LOCATION FIELDS -->
+                <div class="name-card"style="display:inline-block;">
+                    <p style="display:block;"><b>Leena M.</b></p>
+                    <p style="display:block;"><b>Waterloo</b></p>
+                </div>
+                <!-- Technologies  -->
+                <div class="tech-card w3-container w3-white">
+                    <p> Technologies Specialization</p>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>   
+    <!-- END OF PROJECT SCROLLER -->
 </div>
-<script src="/public/js/createfeed.js"></script>
-</body>
-</html>
-
+<!-- END OF BOTH PROJECT SCROLLER -->
+</div>
+<div class="page-break"></div>
+<footer></footer>

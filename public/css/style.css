@@ -1,0 +1,96 @@
+.media-scroller {
+    display:grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+    grid-auto-columns: 21%;
+    /* right: 300px; */
+
+    padding: 1rem 1rem;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    
+    
+}
+
+.project-scroll {
+
+}
+
+.media-scroller--with-groups {
+
+    grid-auto-columns: 90%;
+}
+
+.media-group {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
+    height: auto;
+}
+
+.profile-card { 
+    padding: 1rem;
+    /* background: lightgray; */
+    border-radius: 2px;
+    gap: 0.5rem;
+    grid-template-rows: min-content;
+}
+
+.profile-card > img {
+    inline-size: 100%;
+    aspect-ratio: 16 / 16;
+    object-fit: cover;
+
+}
+.profile-project-bcard {
+    padding: 1rem;
+    /* background: lightgray; */
+    border-radius: 2px;
+    gap: 0.5rem;
+    grid-template-rows: min-content;
+    height:35%
+}
+
+.profile-project-bcard > img {
+    inline-size: 30%;
+    aspect-ratio: 16 / 16;
+    object-fit: cover;
+    margin-bottom: 10px;
+
+}
+
+.snaps-inline {
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 1rem;
+
+}
+
+.snaps-inline > * {
+    scroll-snap-align: start;
+}
+h10 {
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 50px;
+    padding: 0;
+    justify-content: center;;
+}
+
+.upper-card {
+    height: 37%;
+    border-radius: 20px;
+}
+
+.tech-card {
+    height:27%;
+    border-radius: 20px;
+}
+
+.w3-container {
+    margin-top: 5px;
+}
+.page-break {
+    height:90px;
+    display:inline-block;
+}
