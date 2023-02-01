@@ -7,9 +7,7 @@
 
     padding: 1rem 1rem;
     overflow-x: auto;
-    overscroll-behavior-inline: contain;
-    
-    
+    overscroll-behavior-inline: contain;  
 }
 
 .project-scroll {
