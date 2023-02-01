@@ -6,12 +6,9 @@ const projectData = [
       name: "Day Planner",
       description: "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
       link: "github/cparsons/dayplanner.com",
+      project_technology:"HTML",
       user_id: "1",
-      technology_id: 11,
-      technology_id: 12,
-      technology_id: 1,
-      technology_id: 2,
-      technology_id: 3,
+      
 
    },
    {
@@ -19,9 +16,8 @@ const projectData = [
       name: "Porfolio Website",
       description: "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
       link: "github/cparsons/dayplanner.com",
+      project_technology:"Javascript",
       user_id: "1",
-      technology_id: 2,
-      technology_id: 3,
 
    },
    {
@@ -29,39 +25,32 @@ const projectData = [
       name: "Calculator App",
       description: "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
       link: "github/cparsons/dayplanner.com",
+      project_technology:"HTML",
       user_id: "2",
-      technology_id: 1,
-
-
    },
    {
       id: 4,
       "name": "Note Taker",
       description: "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
       link: "github/cparsons/dayplanner.com",
+      project_technology:"HTML",
       user_id: "3",
-      technology_id: 2,
-      technology_id: 3,
-
    },
    {
       id: 5,
       name: "Weaper App",
       description: "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
       link: "github/cparsons/dayplanner.com",
+      project_technology:"Express js",
       user_id: "3",
-      technology_id: 5,
-      technology_id: 6,
-
    },
    {
       id: 6,
       name: "Weaper App",
       description: "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
       link: "github/cparsons/dayplanner.com",
+      project_technology:"HTML",
       user_id: "3",
-      technology_id: 7,
-      technology_id: 8,
 
    },
    {
@@ -69,29 +58,25 @@ const projectData = [
       name: "Weaper App",
       description: "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
       link: "github/cparsons/dayplanner.com",
+      project_technology:"HTML",
       user_id: "4",
-      technology_id: 9,
-      technology_id: 10,
 
    },
    {
       id: 8,
       name: "Weaper App",
-      description": "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
+      description: "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
       link: "github/cparsons/dayplanner.com",
+      project_technology:"HTML",
       user_id: "4",
-      technology_id: 2,
-      technology_id: 5,
-
    },
    {
       id: 9,
       name: "Weaper App",
       description: "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
       link: "github/cparsons/dayplanner.com",
+      project_technology:"HTML",
       user_id: "4",
-      technology_id: 4,
-      technology_id: 11,
 
    },
    {
@@ -99,19 +84,16 @@ const projectData = [
       name: "Weaper App",
       description: "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
       link: "github/cparsons/dayplanner.com",
+      project_technology:"HTML",
       user_id: "4",
-      technology_id: 9,
-      technology_id: 3,
-
    },
    {
       id: 11,
       name: "Weaper App",
       description: "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
       link: "github/cparsons/dayplanner.com",
+      project_technology:"HTML",
       user_id: "5",
-      technology_id: 7,
-      technology_id: 1,
 
    },
    {
@@ -119,9 +101,8 @@ const projectData = [
       name: "Weaper App",
       description: "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
       link: "github/cparsons/dayplanner.com",
+      project_technology:"HTML",
       user_id: "6",
-      technology_id: 1,
-      technology_id: 8,
 
    },
    {
@@ -129,9 +110,8 @@ const projectData = [
       name: "Weaper App",
       description: "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
       link: "github/cparsons/dayplanner.com",
+      project_technology:"HTML",
       user_id: "7",
-      technology_id: 2,
-      technology_id: 3,
 
    },
    {
@@ -139,11 +119,8 @@ const projectData = [
       name: "Weaper App",
       description: "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
       link: "github/cparsons/dayplanner.com",
+      project_technology:"HTML",
       user_id: "8",
-      technology_id: 4,
-      technology_id: 5,
-      technology_id: 1,
-      technology_id: 2,
 
    },
    {
@@ -151,9 +128,8 @@ const projectData = [
       name: "Weaper App",
       description: "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
       link: "github/cparsons/dayplanner.com",
+      project_technology:"HTML",
       user_id: "9",
-      technology_id: 4,
-      technology_id: 5,
 
    }
 ];

@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const User = require('../models/User');
 const Project = require('../models/Project');
-const Technology = require('../models/Technology');
+
 // const cloudinary = require('/utils/cloudinary');
 
 // Cloudinary upload
@@ -39,12 +39,9 @@ router.get('/', async (req, res) => {
             include: [
                 {
                     model: Project,
-                    attributes: ['name', 'description', 'link', 'technology'],
+                    attributes: ['name', 'description', 'link', 'project_technology'],
                 },
-                {
-                    model: Technology,
-                    attributes: ['name'],
-                },
+               
             ],
         });
         const usergallery = userData.map((user) => 
@@ -71,10 +68,7 @@ router.get('/', async (req, res) => {
                     model: User,
                     attributes: ['first_name', 'last_name', 'city'],
                 },
-                {
-                    model: Technology,
-                    attributes: ['name'],
-                },
+                
             ],
         });
         const projectgallery = projectData.map((project) => 

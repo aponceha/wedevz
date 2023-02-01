@@ -1,18 +1,15 @@
 const sequelize = require('../config/connection');
-const { Technology, Project } = require('../models');
+const { User, Project } = require('../models');
 
-// const userData = require('./userData.json');
+const userData = require('./userData.js');
 const projectData = require('./projectData.js');
-const technologyData = require('./technologyData');
+
 
 const seedDatabase = async () => {
     await sequelize.sync({ force: true });
 
-    await seedProject();
-    await seedTechnology();
-
-  
-  
+    await userData();
+    await projectData();
 
   process.exit(0);
 };

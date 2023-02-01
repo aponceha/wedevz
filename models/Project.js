@@ -27,7 +27,15 @@ Project.init(
       },
     },
     link: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
+    },
+    project_technology: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: '',
+      validate: {
+        len: [1],
+      },
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -36,13 +44,7 @@ Project.init(
         key: "id",
       },
     },
-    technology_id: {
-      type: DataTypes.INTEGER,
-      referece: {
-        model: "technology",
-        key: "id",
-      },
-    },
+    
   },
   {
     sequelize,
