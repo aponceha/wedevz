@@ -1,4 +1,4 @@
-const { Project, User, Technology } = require("../../models");
+const { Project, User } = require("../../models");
 const router = require("express").Router();
 
 // GET all users
@@ -7,12 +7,9 @@ router.get("/", (req, res) => {
     include: [
       {
         model: Project,
-        attributes: ["id", "name", "description", "link", "technology"],
+        attributes: ["id", "name", "description", "link", "project_technology"],
       },
-      {
-        model: Technology,
-        attributes: ["id", "name"],
-      },
+      
     ],
     attributes: { exclude: ["password"] },
   })
@@ -29,27 +26,15 @@ router.get("/:id", (req, res) => {
     include: [
       {
         model: Project,
-        attributes: ["id", "name", "description", "link", "technology"],
+        attributes: ["id", "name", "description", "link", "project_technology"],
       },
-      {
-        model: Technology,
-        attributes: ["id", "name"],
-      },
+      
     ],
     attributes: { exclude: ["password"] },
     where: {
       id: req.params.id,
     },
-    include: [
-      {
-        model: Project,
-        attributes: ["id", "name", "description", "link", "technology"],
-      },
-      {
-        model: Technology,
-        attributes: ["id", "name"],
-      },
-    ],
+   
   })
     .then((dbUserData) => {
       if (!dbUserData) {
