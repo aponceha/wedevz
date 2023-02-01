@@ -1,37 +1,7 @@
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="" style="width:110px;">
-  <!-- Avatar image in top left corner -->
-  <i class="fa-solid fa-share-nodes" style="display:block; color:white; height: 40px; width: 40px;"></i>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
-    <i class="fa fa-home w3-xxlarge"></i>
-    <p>HOME</p>
-  </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-user w3-xxlarge"></i>
-    <p>ABOUT</p>
-  </a>
-  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-eye w3-xxlarge"></i>
-    <p>PHOTOS</p>
-  </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-envelope w3-xxlarge"></i>
-    <p>CONTACT</p>
-  </a>
-</nav>
-
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
-  </div>
-</div>
-
+<link rel="stylesheet" type="text/css" href="/wedevz/public/css/style.css">
 <!-- Page Content -->
-<div class="w3-padding-large" id="main">
+
+<div class="w3-padding-large">
   <!-- Header/Home -->
   <!-------------------------------------------------------------------------- HB -->
   <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
@@ -41,29 +11,28 @@
   </header>
     <!-------------------------------------------------------------------------- /HB -->
 <!-- CAROUSEL SECTION -->
-  <div class="media-scroller media-scroller--with-groups snaps-inline">
+  <div class="media-scroller snaps-inline">
     {{#each usergallery as |user|}}
         <!-- pic 1 -->
         <div class="profile-card">
-            <img src={{user.user_pic}} alt="Norway" class="w3-hover-opacity">
-            <div class="w3-container w3-white" style="border-radius: 30px;">
+            <img src="https://res.cloudinary.com/dfh56dqku/image/upload/v1675255966/p1-modified_fzitz1.png" alt="Norway" class="w3-hover-opacity">        
+            <div class="profile-bottom-card">
               <p style="font-size:24px"><b>{{user.first_name}} {{user.last_name}}</b></p>
-              <p style="font-style: italic">{{user.location}}</p>
-              <p style="font-style: italic">{{user.employer}}</p>
+              <p style="font-style: italic">City: {{user.location}}</p>
+              <p style="font-style: italic">Employer: {{user.employer}}</p>
               <ul style="list-style: none">
-                  <li >{{user.user_technology}}</li>
+                  <li >Expert in: {{user.user_technology}}</li>
               </ul>
               <p>{{user.github}}</p>
             </div>
         </div>
     
-    </div>   
+      
     {{/each}}
-
-    {{>exploreportfolio}}
+    </div> 
+    
 
     <!-- END OF PROJECT SCROLLER -->
 </div>
-
-<div class="page-break"></div>
+{{> exploreportfolio}}
 <footer></footer>

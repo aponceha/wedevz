@@ -19,28 +19,35 @@
     <p>CONTACT</p>
   </a>
 </nav> --}}
-
-
+<link rel="stylesheet" type="text/css" href="/wedevz/public/css/style.css">
+<!-- Page Content -->
+<div class="w3-padding-large">
+  <!-- Header/Home -->
+  <!-------------------------------------------------------------------------- HB -->
+  {{!-- <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">We</span>Devz</h1>
+    <h10>Explore Projects</h10>
+    <i class="fa-regular fa-square-share-nodes fa-10px" style="color:#68447A; width:100px; height:100px"></i>
+  </header> --}}
 
     <!-- END OF PROJECT SCROLLER -->
-
+  <div class="media-scroller snaps-inline project-scroll" style="grid-auto-columns: 43%;">
+  {{#each projectgallery as |project|}}
     <div class="w3-row-padding" style="display:flex; justify-content: center; padding-top: 30px; align-items: center;">
-        <button class="w3-button" style="background-color: white; color: black; height:40px" onclick="plusDivs(-1)">&#10094;</button>
         <!--CARD START -->
-        {{#each projectgallery as |project|}}
         <div class=" w3-container w3-margin-bottom" style="width:530px; height: 696px; border: rgb(162, 192, 212) 10px solid; border-radius: 30px; margin-left: 15px;">
             <!-- PROJECT TEXT BOX -->
             <div class="w3-container w3-white" style="margin-top: 15px; border-radius: 30px;">
                 <p><b>{{project.name}}</b></p>
                 <p>{{project.description}}</p>
-                <p>{{project.project_technology}}</p>
+                <p>Technologies: {{project.project_technology}}</p>
 
-                <p>{{project.link}}</p>
+                <p>Project Link: {{project.link}}</p>
             </div>
             <!-- BOTTOM HALF CARD DIV -->
             <div class="w3-container" style="display:inline; justify-content: baseline;">
                 <!-- IMAGE HALF ROW -->
-                <img src={{prject.user_pic}} alt="Norway" style="width:50%; padding-top: 15px;" class="w3-hover-opacity">
+                <img src="https://res.cloudinary.com/dfh56dqku/image/upload/v1675255966/p1-modified_fzitz1.png" alt="Norway" style="width:50%; padding-top: 15px;" class="w3-hover-opacity">
                 <!-- NAME LOCATION FIELDS -->
                 <div style="display:inline-block; padding-left: 5px">
                     <p style="display:block; padding-top: 15px"><b>{{project.first_name}} {{project.last_name}}</b></p>
@@ -55,6 +62,10 @@
             
             <!-- END OF BOTTOM HALF CARD DIV -->
             </div> 
-            {{/each}}
-        </div>
+            </div>
+            
+      </div>
+      {{/each}}
+    </div>
+  </div>
         

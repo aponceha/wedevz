@@ -18,7 +18,7 @@ const Project = require('../models/Project');
 
 // // Render edit page
 // res.render("edit");
-router.get('/explore', async (req, res) => {
+router.get('/explore1', async (req, res) => {
     try {
         const projectData = await Project.findAll({
             include: [
@@ -31,13 +31,13 @@ router.get('/explore', async (req, res) => {
         });
 
         // randomization of array
-        const projectgallery = projectData.map((user) => 
-            user.get({ plain: true })
+        const projectgallery = projectData.map((project) => 
+            project.get({ plain: true })
         );
         console.log(projectgallery);
         // Render Explore Page
         res.render("./partials/exploreportfolio", {
-            projectgallery,
+            ...projectgallery,
             loggedIn: req.session.loggedIn,
         });
     } catch (err) {
@@ -54,7 +54,7 @@ router.get('/explore', async (req, res) => {
             include: [
                 {
                     model: Project,
-                    attributes: ['name', 'description', 'link', 'project_technology'],
+                   
                 },
                
             ],

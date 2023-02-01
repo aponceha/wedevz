@@ -2,7 +2,7 @@
     display:grid;
     gap: 1rem;
     grid-auto-flow: column;
-    grid-auto-columns: 21%;
+    grid-auto-columns: 31%;
     /* right: 300px; */
 
     padding: 1rem 1rem;
@@ -25,10 +25,16 @@
     gap: 1rem;
     height: auto;
 }
-
+.profile-bottom-card {
+    height: 50%;
+    border-radius: 20px;
+    background-color: white;
+    grid-template-rows: min-content;
+    padding: 1rem;
+}
 .profile-card { 
     padding: 1rem;
-    /* background: lightgray; */
+    background: lightgray;
     border-radius: 2px;
     gap: 0.5rem;
     grid-template-rows: min-content;
@@ -38,6 +44,9 @@
     inline-size: 100%;
     aspect-ratio: 16 / 16;
     object-fit: cover;
+    height: 50%;
+    place-items: center;
+
 
 }
 .profile-project-bcard {
