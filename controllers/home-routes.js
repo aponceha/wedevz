@@ -13,7 +13,7 @@ const Project = require('../models/Project');
 // Render signup page
 // res.render("signup");
 
-// // Render profile page
+// Render profile page
 // res.render("profile");
 
 // // Render edit page
