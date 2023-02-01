@@ -18,8 +18,34 @@ const Project = require('../models/Project');
 
 // // Render edit page
 // res.render("edit");
+router.get('/explore', async (req, res) => {
+    try {
+        const projectData = await Project.findAll({
+            include: [
+                {
+                    model: User,
+                    attributes: ['first_name', 'last_name', 'github', 'user_technology', 'location', 'user_pic'],
+                },
+               
+            ],
+        });
 
-// Render explore page
+        // randomization of array
+        const projectgallery = projectData.map((user) => 
+            user.get({ plain: true })
+        );
+        console.log(projectgallery);
+        // Render Explore Page
+        res.render("./partials/exploreportfolio", {
+            projectgallery,
+            loggedIn: req.session.loggedIn,
+        });
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+});
+
 
 // GET all users for explore page
 router.get('/explore', async (req, res) => {
