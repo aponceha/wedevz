@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Project, User, Technology } = require("../../models");
+const { Project, User } = require("../../models");
 
 // GET all projects
 router.get("/", (req, res) => {
@@ -37,9 +37,9 @@ router.post("/", (req, res) => {
     name: req.body.name,
     description: req.body.description,
     link: req.body.link,
-    technology: req.body.technology,
+    project_technology: req.body.project_technology,
     user_id: req.body.user_id,
-    technology_id: req.body.technology_id,
+    
   })
     .then((dbProjectData) => res.json(dbProjectData))
     .catch((err) => {
@@ -55,9 +55,9 @@ router.put("/:id", (req, res) => {
       name: req.body.name,
       description: req.body.description,
       link: req.body.link,
-      technology: req.body.technology,
+      project_technology: req.body.project_technology,
       user_id: req.body.user_id,
-      technology_id: req.body.technology_id,
+      
     },
     {
       where: {
