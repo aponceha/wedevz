@@ -74,6 +74,32 @@ router.get('/profile', async (req, res) => {
     }
 });
 
+// GET a single user
+router.get('/profile/:id', async (req, res) => {
+    try {
+      const projectData = await User.findByPk(req.params.id, {
+        include: [
+            {
+                model: Project,
+                attributes: ['name', 'description', 'link', 'project_technology'],
+            },
+           
+        ],
+      });
+  
+      const project = projectData.get({ plain: true });
+      console.log(project);
+      console.log(project.projects);
+      res.render('./partials/profile', {
+        ...project,
+        logged_in: req.session.loggedIn
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+  
+
 router.get('/login', async (req, res) => {
     try {
        

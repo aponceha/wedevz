@@ -48,9 +48,9 @@
     <p>{{ bio }}</p>
     
     <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
-    {{#each technology as |tech|}}
-        <p class="w3-wide">{{tech.name}}</p>
-    {{/each}}
+    <hr style="width:200px" class="w3-opacity">
+        <p class="w3-wide">{{user_technology}}</p>
+    
     <!-- Testimonials -->
     
   <!-- End About Section -->
@@ -62,24 +62,25 @@
     <hr style="width:200px" class="w3-opacity">
 
     <!-- Grid for photos -->
-    {{#each projects as |project|}}
+   
     <div class="w3-row-padding" style="margin:0 -16px">
         <div class="row">
-            <div class="column">
+             {{#each projects as |prj|}}
+            <div class="column d-flex align-items-stretch">
               <div class="card">
-                <h3>{{project.name}}</h3>
-                <p>{{project.description}}</p>
-                {{#each technology as |tech|}}
-                    <p class="w3-wide">{{tech.name}}</p>
-                {{/each}}
+                <h3>{{prj.name}}</h3>
+                <p>{{prj.description}}</p>
+                
+                <p class="w3-wide">{{prj.project_technology}}</p>
+                
               </div>
             </div>
-    
+             {{/each}}
         </div>
     <!-- End photo grid -->
     </div>
   <!-- End Portfolio Section -->
-  {{/each}}
+ 
   </div>
 
   <!-- Contact Section -->
