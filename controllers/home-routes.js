@@ -2,22 +2,8 @@ const router = require("express").Router();
 const User = require("../models/User");
 const Project = require("../models/Project");
 
-// const cloudinary = require('/utils/cloudinary');
-
-// Cloudinary upload
-
-// Render login page
-// res.render("login");
-
-// Render signup page
-// res.render("signup");
-
-// // Render profile page
-// res.render("profile");
-
-// // Render edit page
-// res.render("edit");
-router.get("/explore1", async (req, res) => {
+// GET all projects for explore page
+router.get("/exploreportfolio", async (req, res) => {
   try {
     const projectData = await Project.findAll({
       include: [
@@ -110,29 +96,4 @@ router.get("/login", async (req, res) => {
   }
 });
 
-// GET all projects for explore page
-// router.get('/projects/', async (req, res) => {
-//     try {
-//         const projectData = await Project.findAll({
-//             include: [
-//                 {
-//                     model: User,
-//                     attributes: ['first_name', 'last_name', 'location'],
-//                 },
-
-//             ],
-//         });
-//         const projectgallery = projectData.map((project) =>
-//             project.get({ plain: true })
-//         );
-//         // Render Explore Page
-//         res.render("./partials/explorepage", {
-//             projectgallery,
-//             loggedIn: req.session.loggedIn,
-//         });
-//     } catch (err) {
-//         console.log(err);
-//         res.status(500).json(err);
-//     }
-// });
 module.exports = router;
