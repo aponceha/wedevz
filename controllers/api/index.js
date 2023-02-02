@@ -2,8 +2,7 @@ const router = require('express').Router();
 
 const projectRoutes = require('./projectRoutes');
 const userRoutes = require('./userRoutes');
-const uploadRoutes = require('./uploadRoutes');
-
+// const cloudinaryRoutes = require('./cloudinaryRoutes');
 
 
 router.use('/projects', projectRoutes);
