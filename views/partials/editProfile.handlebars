@@ -35,7 +35,7 @@
 <h2>Edit Profile</h2>
 
 <div class="container">
-  <form action="/action_page.php">
+  <form  method="post" id="update-profile-form">
     <div class="row">
       <div class="col-25">
         <label for="fname">First Name</label>
@@ -114,7 +114,7 @@
     <div class="row">
         <div class="col-75"></div>
         <div class="col-25">
-            <input type="submit" value="Submit">
+             <button type="submit" data-id="{{id}}">Submit</button>
         </div>
     </div>
   </form>
@@ -212,7 +212,7 @@
                 <label for="description">Description</label>
               </div>
               <div class="col-50">
-                <textarea type="text" id="description" name="pdescription" placeholder="Enter project description.." required>
+                <textarea type="text" id="description" name="pdescription" placeholder="Enter project description..">
               </div>
         </div>
         <div class="row">
@@ -243,3 +243,5 @@
   </div>
 
 </div>
+
+<script src="/public/js/editprofile.js"></script>
