@@ -19,7 +19,7 @@ const signUp = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace("/explore");
+        document.location.replace("/profile/:id");
       } else {
         alert(response.statusText);
       }
