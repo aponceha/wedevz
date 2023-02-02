@@ -3,11 +3,11 @@ const Project = require('./Project');
 
 
 User.hasMany(Project, {
-  foreignKey: 'project_id',
+  foreignKey: 'user_id',
 });
 
 Project.belongsTo(User, {
-  foreignKey: 'project_id',
+  foreignKey: 'user_id',
 });
 
   

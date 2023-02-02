@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const User = require('../models/User');
 const Project = require('../models/Project');
+const fileUpload = require('express-fileupload');
 
 // const cloudinary = require('/utils/cloudinary');
 
@@ -29,7 +30,7 @@ router.get('/explore1', async (req, res) => {
                
             ],
         });
-
+       
         // randomization of array
         const projectgallery = projectData.map((project) => 
             project.get({ plain: true })
@@ -37,7 +38,7 @@ router.get('/explore1', async (req, res) => {
         console.log(projectgallery);
         // Render Explore Page
         res.render("./partials/exploreportfolio", {
-            ...projectgallery,
+            projectgallery,
             loggedIn: req.session.loggedIn,
         });
     } catch (err) {
@@ -108,12 +109,15 @@ router.get('/login', async (req, res) => {
         res.render("./partials/login", {
             
             loggedIn: req.session.loggedIn,
+            
         });
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
     }
 });
+
+
 
 // GET all projects for explore page
 // router.get('/projects/', async (req, res) => {

@@ -101,7 +101,8 @@ h10 {
     height:90px;
     display:inline-block;
 }
-body {
+
+/* body {
   font-family: "Raleway", sans-serif;
   background-color: #666666 !important;
 }
@@ -225,9 +226,9 @@ hr {
   content: "";
   clear: both;
   display: table;
-}
+} */
 
-@media screen and (max-width: 300px) {
+/* @media screen and (max-width: 300px) {
   .signupbtn {
     width: 100%;
   }
@@ -241,4 +242,4 @@ hr {
   .cancelbtn {
     width: 100%;
   }
-}
+} */
