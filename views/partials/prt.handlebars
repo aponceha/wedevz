@@ -8,9 +8,8 @@
   <div class="media-scroller snaps-inline project-scroll" style="grid-auto-columns: 43%;">
   {{#each projectgallery as |project|}}
     <div class="w3-row-padding" style="display:flex; justify-content: center; padding-top: 30px; align-items: center;">
-        
         <!--CARD START -->
-        <div class="profile-card w3-container w3-margin-bottom" style="background-color: #34223c; width:530px; height: 696px; border-radius: 30px; margin-left: 15px;">
+        <div class=" w3-container w3-margin-bottom" style="width:530px; height: 696px; border: rgb(162, 192, 212) 10px solid; border-radius: 30px; margin-left: 15px;">
             <!-- PROJECT TEXT BOX -->
             <div class="w3-container w3-white" style="margin-top: 15px; border-radius: 30px;">
                 <p><b>{{project.name}}</b></p>
@@ -20,18 +19,18 @@
                 <p>Project Link: {{project.link}}</p>
             </div>
             <!-- BOTTOM HALF CARD DIV -->
-            <div class="profile-bottom-card w3-container" style="display:inline; justify-content: baseline;">
+            <div class="w3-container" style="display:inline; justify-content: baseline;">
                 <!-- IMAGE HALF ROW -->
                 <img src="https://res.cloudinary.com/dfh56dqku/image/upload/v1675255966/p1-modified_fzitz1.png" alt="Norway" style="width:50%; padding-top: 15px;" class="w3-hover-opacity">
                 <!-- NAME LOCATION FIELDS -->
-                <div class="name-card" style="display:inline-block; padding-left: 5px; color: black; background-color: #34223c">
-                    <p style="display:block; padding-top: 15px; font-size: large; color: white"><b>{{project.user.first_name}} {{project.user.last_name}}</b></p>
-                    <p style="display:block; font-style: font-weight: bold; color: white; italic; background-color: #34223c;">{{project.user.location}}</p>
+                <div style="display:inline-block; padding-left: 5px">
+                    <p style="display:block; padding-top: 15px"><b>{{project.user.first_name}} {{project.last_name}}</b></p>
+                    <p style="display:block; font-style: italic"><b>{{project.user.location}}</b></p>
                 </div>
                 <!-- Technologies  -->
-                <div class="tech-card w3-container w3-white" style="padding-top: 5px; border-radius: 30px;">
-                    <p style="font-weight: bold"> Technologies Specialization</p>
-                    <p style="font-style: italic">{{project.user.user_technology}}</p>
+                <div class="w3-container w3-white" style="padding-top: 5px; border-radius: 30px;">
+                    <p> Technologies Specialization</p>
+                    <p>{{project.user.user_technology}}</p>
 
                 </div>
             

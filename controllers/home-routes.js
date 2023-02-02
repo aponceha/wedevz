@@ -29,7 +29,7 @@ router.get("/exploreportfolio", async (req, res) => {
       console.log(projectgallery);
       // Render Explore Page
       res.render("./partials/exploreportfolio", {
-        ...projectgallery,
+        projectgallery,
         loggedIn: req.session.loggedIn,
       });
     } catch (err) {
@@ -38,37 +38,8 @@ router.get("/exploreportfolio", async (req, res) => {
     }
   });
   
-<<<<<<< HEAD
   // GET all users for explore page
   router.get("/", async (req, res, withAuth) => {
-=======
-  // Edit a single user
-router.get('/editprofile/:id', async (req, res) => {
-    try {
-      const projectData = await User.findByPk(req.params.id, {
-        include: [
-            {
-                model: Project,
-                attributes: ['name', 'description', 'link', 'project_technology'],
-            },
-           
-        ],
-      });
-  
-      const project = projectData.get({ plain: true });
-      console.log(project);
-      console.log(project.projects);
-      res.render('./partials/editprofile', {
-        ...project,
-        logged_in: req.session.loggedIn
-      });
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  });
-
-router.get('/login', async (req, res) => {
->>>>>>> d05855ce8db73813bf754eac0618a63c5f5e41fd
     try {
       const userData = await User.findAll({
         include: [

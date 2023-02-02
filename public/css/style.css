@@ -131,7 +131,7 @@ hr {
   content: "";
   clear: both;
   display: table;
-} */
+} 
 
 /* @media screen and (max-width: 300px) {
   .signupbtn {
@@ -153,7 +153,6 @@ hr {
   gap: 1rem;
   grid-auto-flow: column;
   grid-auto-columns: 31%;
-  /* right: 300px; */
 
   padding: 1rem 1rem;
   overflow-x: auto;
@@ -180,6 +179,7 @@ hr {
   background-color: white;
   grid-template-rows: min-content;
   padding: 1rem;
+  color:#34223c;
 }
 .profile-card {
   padding: 1rem;
