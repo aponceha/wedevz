@@ -7,14 +7,26 @@ const signUp = async (event) => {
   const employer = document.querySelector("#employee-signup").value.trim();
   // const user_pic = document.querySelector("#user_pic-signup").value.trim();
   const age = document.querySelector("#age-signup").value.trim();
-  const user_technology = document.querySelector("#user_technology-signup").value.trim();
+  const user_technology = document
+    .querySelector("#user_technology-signup")
+    .value.trim();
   const education = document.querySelector("#education-signup").value.trim();
   const github = document.querySelector("#github-signup").value.trim();
 
   if (username && email && password) {
     const response = await fetch("/api/users", {
       method: "POST",
-      body: JSON.stringify({ username, email, password, location, employer, age, user_technology, education, github }),
+      body: JSON.stringify({
+        username,
+        email,
+        password,
+        location,
+        employer,
+        age,
+        user_technology,
+        education,
+        github,
+      }),
       headers: { "Content-Type": "application/json" },
     });
 
@@ -25,3 +37,5 @@ const signUp = async (event) => {
     }
   }
 };
+
+document.querySelector(".signup-form").addEventListener("submit", signUp);

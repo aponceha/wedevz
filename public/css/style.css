@@ -1,98 +1,4 @@
-.media-scroller {
-    display:grid;
-    gap: 1rem;
-    grid-auto-flow: column;
-    grid-auto-columns: 31%;
-    /* right: 300px; */
-
-    padding: 1rem 1rem;
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;  
-}
-
-.project-scroll {
-
-}
-
-.media-scroller--with-groups {
-
-    grid-auto-columns: 90%;
-}
-
-.media-group {
-    display: grid;
-    grid-auto-flow: column;
-    gap: 1rem;
-    height: auto;
-}
-.profile-bottom-card {
-    height: 50%;
-    border-radius: 20px;
-    background-color: white;
-    grid-template-rows: min-content;
-    padding: 1rem;
-}
-.profile-card { 
-    padding: 1rem;
-    background: lightgray;
-    border-radius: 2px;
-    gap: 0.5rem;
-    grid-template-rows: min-content;
-}
-
-.profile-card > img {
-    inline-size: 100%;
-    aspect-ratio: 16 / 16;
-    object-fit: cover;
-    height: 50%;
-    place-items: center;
-
-
-}
-.profile-project-bcard {
-    padding: 1rem;
-    /* background: lightgray; */
-    border-radius: 2px;
-    gap: 0.5rem;
-    grid-template-rows: min-content;
-    height:35%
-}
-
-.profile-project-bcard > img {
-    inline-size: 30%;
-    aspect-ratio: 16 / 16;
-    object-fit: cover;
-    margin-bottom: 10px;
-
-}
-
-.snaps-inline {
-    scroll-snap-type: inline mandatory;
-    scroll-padding-inline: 1rem;
-
-}
-
-.snaps-inline > * {
-    scroll-snap-align: start;
-}
-h10 {
-    display: flex;
-    font-size: 1.5rem;
-    font-weight: 300;
-    margin: 50px;
-    padding: 0;
-    justify-content: center;;
-}
-
-.upper-card {
-    height: 37%;
-    border-radius: 20px;
-}
-
-.tech-card {
-    height:27%;
-    border-radius: 20px;
-}
+/* LOGIN PAGE STYLING */
 
 .w3-container {
     margin-top: 5px;
@@ -101,19 +7,17 @@ h10 {
     height:90px;
     display:inline-block;
 }
-
-/* body {
+body {
   font-family: "Raleway", sans-serif;
-  background-color: #666666 !important;
 }
 
+h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
   font-family: "Raleway", sans-serif;
-}
-
-form {
-  border: 3px solid #666666;
 }
 
 .center_block {
@@ -196,6 +100,7 @@ span.psw {
 }
 
 .modal-content {
+  color: rgb(0, 0, 0);
   background-color: #fefefe;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
@@ -239,7 +144,159 @@ hr {
     display: block;
     float: none;
   }
-  .cancelbtn {
-    width: 100%;
-  }
+}
+
+/* EXPLORE PAGE STYLING */
+
+.media-scroller {
+  display: grid;
+  gap: 1rem;
+  grid-auto-flow: column;
+  grid-auto-columns: 31%;
+  /* right: 300px; */
+
+  padding: 1rem 1rem;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+/* .project-scroll {
+
 } */
+
+.media-scroller--with-groups {
+  grid-auto-columns: 90%;
+}
+
+.media-group {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1rem;
+  height: auto;
+}
+.profile-bottom-card {
+  height: 50%;
+  border-radius: 20px;
+  background-color: white;
+  grid-template-rows: min-content;
+  padding: 1rem;
+}
+.profile-card {
+  padding: 1rem;
+  background: lightgray;
+  border-radius: 2px;
+  gap: 0.5rem;
+  grid-template-rows: min-content;
+}
+
+.profile-card > img {
+  inline-size: 100%;
+  aspect-ratio: 16 / 16;
+  object-fit: cover;
+  height: 50%;
+  place-items: center;
+}
+.profile-project-bcard {
+  padding: 1rem;
+  /* background: lightgray; */
+  border-radius: 2px;
+  gap: 0.5rem;
+  grid-template-rows: min-content;
+  height: 35%;
+}
+
+.profile-project-bcard > img {
+  inline-size: 30%;
+  aspect-ratio: 16 / 16;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 1rem;
+}
+
+.snaps-inline > * {
+  scroll-snap-align: start;
+}
+
+h10 {
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 50px;
+  padding: 0;
+  justify-content: center;
+}
+
+.upper-card {
+  height: 37%;
+  border-radius: 20px;
+}
+
+.tech-card {
+  height: 27%;
+  border-radius: 20px;
+}
+
+.w3-container {
+  margin-top: 5px;
+}
+.page-break {
+  height: 90px;
+  display: inline-block;
+}
+
+/* PROFILE PAGE STYLING */
+
+.w3-row-padding img {
+  margin-bottom: 12px;
+}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {
+  width: 120px;
+  background: #533661;
+}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {
+  margin-left: 120px;
+}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {
+  #main {
+    margin-left: 0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+  margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
