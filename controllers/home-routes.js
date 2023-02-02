@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const User = require("../models/User");
 const Project = require("../models/Project");
+const withAuth = require("../utils/auth");
 
 // GET all projects for explore page
 router.get("/exploreportfolio", async (req, res) => {
@@ -38,7 +39,7 @@ router.get("/exploreportfolio", async (req, res) => {
 });
 
 // GET all users for explore page
-router.get("/explore", async (req, res) => {
+router.get("/", async (req, res, withAuth) => {
   try {
     const userData = await User.findAll({
       include: [
@@ -52,7 +53,7 @@ router.get("/explore", async (req, res) => {
     const usergallery = userData.map((user) => user.get({ plain: true }));
     console.log(usergallery);
     // Render Explore Page
-    res.render("./partials/explorepage", {
+    res.render("./partials/homepage", {
       usergallery,
       loggedIn: req.session.loggedIn,
     });
