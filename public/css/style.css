@@ -276,13 +276,8 @@ h10 {
 /* Float four columns side by side */
 .pcard {
   float: left;
-<<<<<<< HEAD
-  width: 25%;
-  padding: 10px;
-=======
   
   padding: 10px ;
->>>>>>> d05855ce8db73813bf754eac0618a63c5f5e41fd
 }
 
 .card {
@@ -308,8 +303,6 @@ h10 {
     margin-bottom: 20px;
   }
 }
-<<<<<<< HEAD
-=======
 
 /* Style the counter cards */
 .card {
@@ -393,4 +386,3 @@ ul {
   -webkit-columns: 6;
   -moz-columns: 6;
 }
->>>>>>> d05855ce8db73813bf754eac0618a63c5f5e41fd

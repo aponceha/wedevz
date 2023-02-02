@@ -9,15 +9,15 @@
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-theme ">
+  <a href="/profile/1" class="w3-bar-item w3-button w3-padding-large w3-hover-theme ">
     <i class="fa fa-user w3-xxlarge"></i>
     <p>PROFILE</p>
   </a>
-  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-theme">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-theme">
     <i class="fa fa-th-list w3-xxlarge"></i>
     <p>PROJECT</p>
   </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-theme">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-theme">
     <i class="fa fa-envelope w3-xxlarge"></i>
     <p>CONTACT</p>
   </a>
@@ -40,7 +40,10 @@
     <img src={{user_pic}} >
     
   </header>
-
+  <div class="col-75"></div>
+  <div class="col-25">
+    <button class="w3-button w3-round-xxlarge w3-theme">Edit Profile</button>
+  </div>
   <!-- About Section -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
     <h2 class="w3-text-light-grey">{{first_name}} {{ last_name }}</h2>
@@ -50,7 +53,7 @@
     <div class="w3-padding-32 w3-content" id="skills"></div>
     <h2 class="w3-padding-2 w3-text-light-grey">My Skills</h2>
     <p class="w3-wide">{{user_technology}}</p>
-    
+   </div> 
     <!-- Testimonials -->
     
   <!-- End About Section -->
