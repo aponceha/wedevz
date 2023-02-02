@@ -38,7 +38,7 @@ const projectData = [
    },
    {
       id: 5,
-      name: "Weaper App",
+      name: "Weaper App5",
       description: "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
       link: "github/cparsons/dayplanner.com",
       project_technology:"Express js",
@@ -46,7 +46,7 @@ const projectData = [
    },
    {
       id: 6,
-      name: "Weaper App",
+      name: "Weaper App6",
       description: "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
       link: "github/cparsons/dayplanner.com",
       project_technology:"HTML",
@@ -55,7 +55,7 @@ const projectData = [
    },
    {
       id: 7,
-      name: "Weaper App",
+      name: "Weaper App7",
       description: "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
       link: "github/cparsons/dayplanner.com",
       project_technology:"HTML",
@@ -64,7 +64,7 @@ const projectData = [
    },
    {
       id: 8,
-      name: "Weaper App",
+      name: "Weaper App8",
       description: "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
       link: "github/cparsons/dayplanner.com",
       project_technology:"HTML",
@@ -72,7 +72,7 @@ const projectData = [
    },
    {
       id: 9,
-      name: "Weaper App",
+      name: "Weaper App9",
       description: "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
       link: "github/cparsons/dayplanner.com",
       project_technology:"HTML",
@@ -81,7 +81,7 @@ const projectData = [
    },
    {
       id: 10,
-      name: "Weaper App",
+      name: "Weaper App10",
       description: "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
       link: "github/cparsons/dayplanner.com",
       project_technology:"HTML",
@@ -89,7 +89,7 @@ const projectData = [
    },
    {
       id: 11,
-      name: "Weaper App",
+      name: "Weaper App11",
       description: "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
       link: "github/cparsons/dayplanner.com",
       project_technology:"HTML",
@@ -98,7 +98,7 @@ const projectData = [
    },
    {
       id: 12,
-      name: "Weaper App",
+      name: "Weaper App12",
       description: "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
       link: "github/cparsons/dayplanner.com",
       project_technology:"HTML",
@@ -107,7 +107,7 @@ const projectData = [
    },
    {
       id: 13,
-      name: "Weaper App",
+      name: "Weaper App13",
       description: "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
       link: "github/cparsons/dayplanner.com",
       project_technology:"HTML",
@@ -116,7 +116,7 @@ const projectData = [
    },
    {
       id: 14,
-      name: "Weaper App",
+      name: "Weaper App14",
       description: "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
       link: "github/cparsons/dayplanner.com",
       project_technology:"HTML",
@@ -125,7 +125,7 @@ const projectData = [
    },
    {
       id: 15,
-      name: "Weaper App",
+      name: "Weaper App15",
       description: "App that retrieves what time of day it is, displays an agenda and allows users to write in scheduled meetings and events.",
       link: "github/cparsons/dayplanner.com",
       project_technology:"HTML",

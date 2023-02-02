@@ -1,10 +1,12 @@
-<form action="action_page.php" method="post">
+    <form action="action_page.php" method="post" id="login-form">
       <div class="imgcontainer">
-        <img src="wedevz-logo.png" alt="Avatar" class="avatar" />
+        <img src="/images/wedevz-logo.png" alt="Avatar" class="avatar" />
       </div>
+
       <div class="center_block">
         <label for="uname"><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="uname" required />
+
         <label for="psw"><b>Password</b></label>
         <input
           type="password"
@@ -36,7 +38,7 @@
         title="Close Modal"
         >X</span
       >
-      <form class="modal-content" action="/action_page.php">
+      <form class="modal-content" action="/action_page.php" id="signup-form">
         <div class="container">
           <h1>Sign Up</h1>
           <p>Please fill in this form to create an account.</p>
@@ -62,6 +64,7 @@
             ><b>Technologies<span class="w3-text-red">*</span></b></label
           >
           <input type="text" name="technologies" placeholder="Enter Technologies" />
+          
           <label for="education"><b>Education</b></label>
           <input type="text" name="education" placeholder="Enter Education" />
           <label for="employment"><b>Current Employment</b></label>
@@ -103,11 +106,14 @@
             />
             Remember Me
           </label>
+
           <p><span class="w3-text-red">*</span>Marked Fields are Mandatory.</p>
+
           <div class="clearfix">
             <button type="submit" class="signup">Sign Up</button>
           </div>
         </div>
       </form>
     </div>
+    <script src="/public/js/signup.js"></script>
 <script src="/public/js/login.js"></script>

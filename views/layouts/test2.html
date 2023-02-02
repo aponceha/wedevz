@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+</head>
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <i class="fa-solid fa-share-nodes" style="display:block; color:white; height: 40px; width: 40px;"></i>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>PHOTOS</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <!-------------------------------------------------------------------------- HB -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">We</span>Devz</h1>
+    <p>Explore Network</p>
+    <i class="fa-regular fa-square-share-nodes fa-10px" style="color:#68447A; width:100px; height:100px"></i>
+  </header>
+    <!-------------------------------------------------------------------------- /HB -->
+<!-- CAROUSEL SECTION -->
+  <div class="w3-row-padding" style="display:grid; grid-auto-flow: column; grid-auto-columns: 21%; gap: 1rem; overscroll-behavior-inline: contain; overflow-x: auto; padding-bottom: 30px; padding-top: 30px; justify-content: center; align-items: center">
+    <div class="w3-row-padding" style="display:flex; padding-bottom: 30px; padding-top: 30px; justify-content: center; align-items: center; ">
+        <div id="user1" class="w3-container w3-margin-bottom" style="">
+            <img src="/public/images/p3-modified.png" alt="Norway" style="width:90%" class="w3-hover-opacity">
+            <div class="w3-container w3-white" style="border-radius: 30px;">
+              <p style="font-size:24px"><b>Matt Galanis</b></p>
+              <p style="font-style: italic">Toronto</p>
+              <p style="font-style: italic">Ubisoft</p>
+              <ul style="list-style: none">
+                  <li >REACT</li>
+                  <li >MongoDB</li>
+                  <li >Express</li>
+              </ul>
+              <p>Github Link: mattga@github.com</p>
+            </div>
+        </div>
+        <!-- <button class="w3-button" style="background-color: white; color: black; height:40px" onclick="plusDivs(-1)">&#10094;</button> -->
+        <div id="user2"class=" w3-container w3-margin-bottom" style="">
+            <img src="/public/images/p1-modified.png" alt="Norway" style="width:90%" class="w3-hover-opacity">
+            <div class="w3-container w3-white" style="border-radius: 30px;">
+                <p style="font-size:24px"><b>Lauren Cade</b></p>
+                <p style="font-style: italic">Hamilton</p>
+                <p style="font-style: italic">Google</p>
+                <ul style="list-style: none">
+                    <li >REACT</li>
+                    <li >MongoDB</li>
+                    <li >Express</li>
+                </ul>
+                <p>Github Link: lcaddel@github.com</p>
+            </div>
+        </div>
+    
+    <div id="user3" class="w3-container w3-margin-bottom" style="" >
+      <img src="/public/images/p4-modified.png" alt="Norway" style="width:90%" class="w3-hover-opacity">
+      <div class="w3-container w3-white" style="border-radius: 30px;">
+        <p style="font-size:24px"><b>Santino Russo</b></p>
+        <p style="font-style: italic">Toronto</p>
+        <p style="font-style: italic">Sago Mini</p>
+        <ul style="list-style: none">
+            <li >REACT</li>
+            <li >MongoDB</li>
+            <li >Express</li>
+        </ul>
+        <p>Github Link: s.russo@github.com</p>
+      </div>
+    </div>
+    <div id="user4" class="w3-container w3-margin-bottom" style="">
+      <img src="/public/images/p3-modified.png" alt="Norway" style="width:90%" class="w3-hover-opacity">
+      <div class="w3-container w3-white" style="border-radius: 30px;">
+        <p style="font-size:24px"><b>Matt Galanis</b></p>
+        <p style="font-style: italic">Toronto</p>
+        <p style="font-style: italic">Ubisoft</p>
+        <ul style="list-style: none">
+            <li >REACT</li>
+            <li >MongoDB</li>
+            <li >Express</li>
+        </ul>
+        <p>Github Link: mattga@github.com</p>
+      </div>
+    </div>
+    
+    <!-- <button class="w3-button" style="background-color: white; color: black" onclick="plusDivs(1)">&#10095;</button> -->
+    <div id="user5" class=" w3-container w3-margin-bottom" style="">
+        <img src="/public/images/p1-modified.png" alt="Norway" style="width:90%" class="w3-hover-opacity">
+        <div class="w3-container w3-white" style="border-radius: 30px;">
+          <p style="font-size:24px"><b>Lauren Cade</b></p>
+          <p style="font-style: italic">Hamilton</p>
+          <p style="font-style: italic">Google</p>
+          <ul style="list-style: none">
+              <li >REACT</li>
+              <li >MongoDB</li>
+              <li >Express</li>
+          </ul>
+          <p>Github Link: lcaddel@github.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- END OF USER EXPLORE -->
+
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <p>Explore Projects</p>
+    <i class="fa-regular fa-square-share-nodes fa-10px" style="color:#68447A; width:100px; height:100px"></i>
+  </header>
+  <!-- Second Photo Grid-->
+    <div class="w3-row-padding" style="display:flex; justify-content: center; padding-top: 30px; align-items: center;">
+        <button class="w3-button" style="background-color: white; color: black; height:40px" onclick="plusDivs(-1)">&#10094;</button>
+        <!--CARD START -->
+        <div class=" w3-container w3-margin-bottom" style="width:530px; height: 696px; border: rgb(162, 192, 212) 10px solid; border-radius: 30px; margin-left: 15px; overflow:">
+            <!-- PROJECT TEXT BOX -->
+            <div class="w3-container w3-white" style="margin-top: 15px; border-radius: 30px;">
+                <p><b>Project: Day Planner</b></p>
+                <p>Description: App that retreives what time of day, displays in agenda and allows user to write in scheduled meeting and events. </p>
+                <p>Technologies: HTML, CSS, WEB APIs</p>
+                <p>Github Link: asdf@github.com</p>
+            </div>
+            <!-- BOTTOM HALF CARD DIV -->
+            <div class="w3-container" style="display:inline; justify-content: baseline;">
+                <!-- IMAGE HALF ROW -->
+                <img src="/public/images/p2-modified.png" alt="Norway" style="width:50%; padding-top: 15px;" class="w3-hover-opacity">
+                <!-- NAME LOCATION FIELDS -->
+                <div style="display:inline-block; padding-left: 5px">
+                    <p style="display:block; padding-top: 15px"><b>Christine P.</b></p>
+                    <p style="display:block; font-style: italic"><b>Toronto</b></p>
+                </div>
+                <!-- Technologies  -->
+                <div class="w3-container w3-white" style="padding-top: 5px; border-radius: 30px;">
+                    <p> Technologies Specialization</p>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+            
+            <!-- END OF BOTTOM HALF CARD DIV -->
+            </div> 
+        </div>
+        <!-- END OF CARD -->
+        <div class=" w3-container w3-margin-bottom" style="width:530px; height: 696px; border: rgb(162, 192, 212) 10px solid; border-radius: 30px; margin-left: 15px; margin-right: 15px;">
+            <!-- PROJECT TEXT BOX -->
+            <div class="w3-container w3-white" style="margin-top: 15px; border-radius: 30px;">
+                <p><b>Project: Weather App</b></p>
+                <p>Description: App that retreives weather data from a 3rd party API and displays forecast for users. Aesthetic Desisgn</p>
+                <p>Technologies: HTML, CSS, 3rd Party APIs</p>
+                <p>Github Link: leena@github.com</p>
+            </div>
+            <!-- BOTTOM HALF CARD DIV -->
+            <div class="w3-container" style="display:inline; justify-content: baseline;">
+                <!-- IMAGE HALF ROW -->
+                <img src="/public/images/p5-modified.png" alt="Norway" style="width:50%; padding-top: 15px;" class="w3-hover-opacity">
+                <!-- NAME LOCATION FIELDS -->
+                <div style="display:inline-block; padding-left: 5px">
+                    <p style="display:block; padding-top: 15px"><b>Leena M.</b></p>
+                    <p style="display:block; font-style: italic"><b>Waterloo</b></p>
+                </div>
+                <!-- Technologies  -->
+                <div class="w3-container w3-white" style="padding-top: 5px; border-radius: 30px;">
+                    <p> Technologies Specialization</p>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+            
+            <!-- END OF BOTTOM HALF CARD DIV -->
+            </div> 
+        </div>
+        
+        <button class="w3-button" style="background-color: white; color: black" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+
+<!-- END of CAROUSEL SECTION -->
+
+
+
+  
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+<script src="/public/js/createfeed.js"></script>
+</body>
+</html>
+
