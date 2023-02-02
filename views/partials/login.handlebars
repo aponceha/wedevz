@@ -57,7 +57,9 @@
             required
           />
           <label for="profile-picture"><b>Profile Picture</b></label>
-          <input type="file" name="profile-picture" accept="image/*" />
+          <form ref='uploadForm' id='uploadForm' action='/api/upload' method='post' 
+          encType="multipart/form-data"><input type="file" name="sampleFile" />
+          <input type='submit' value='Upload!' />
           <br /><label for="age" placeholder="Enter Age"><b>Age</b></label>
           <input type="number" name="age" min="1" max="100" />
           <br /><label for="technologies" placeholder="Select Technologies"

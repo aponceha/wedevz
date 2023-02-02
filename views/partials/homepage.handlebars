@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="/wedevz/public/css/style.css">
+
 <!-- Page Content -->
 
 <div class="w3-padding-large">
@@ -14,14 +14,14 @@
   <div class="media-scroller snaps-inline">
     {{#each usergallery as |user|}}
         <!-- pic 1 -->
-        <div class="profile-card">
+        <div class="profile-card" style="display:flexbox">
             <img src="https://res.cloudinary.com/dfh56dqku/image/upload/v1675255966/p1-modified_fzitz1.png" alt="Norway" class="w3-hover-opacity">        
             <div class="profile-bottom-card">
               <p style="font-size:24px"><b>{{user.first_name}} {{user.last_name}}</b></p>
-              <p style="font-style: italic">City: {{user.location}}</p>
-              <p style="font-style: italic">Employer: {{user.employer}}</p>
-              <ul style="list-style: none">
-                  <li >Expert in: {{user.user_technology}}</li>
+              <p style="display:block; font-style: italic">City: {{user.location}}</p>
+              <p style="display:block; font-style: italic">Employer: {{user.employer}}</p>
+              <ul style="display:inline; list-style: none">
+                  <span style="">Expert in: {{user.user_technology}}</span>
               </ul>
               <p>{{user.github}}</p>
             </div>
@@ -35,4 +35,3 @@
     <!-- END OF PROJECT SCROLLER -->
 </div>
 {{!-- {{> exploreportfolio }} --}}
-<footer></footer>

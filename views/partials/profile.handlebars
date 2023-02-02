@@ -37,7 +37,7 @@
 <div class="w3-padding-large" id="main">
   <!-- Header/Home -->
   <header class="w3-container w3-padding-32 w3-center w3-theme-d5" id="home">
-    <img src={{ url }} >
+    <img src={{user_pic}} >
     
   </header>
 
@@ -47,9 +47,9 @@
     <hr style="width:200px" class="w3-opacity">
     <p>{{ bio }}</p>
     
-    <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
-    <hr style="width:200px" class="w3-opacity">
-        <p class="w3-wide">{{user_technology}}</p>
+    <div class="w3-padding-32 w3-content" id="skills"></div>
+    <h2 class="w3-padding-2 w3-text-light-grey">My Skills</h2>
+    <p class="w3-wide">{{user_technology}}</p>
     
     <!-- Testimonials -->
     
@@ -57,20 +57,20 @@
   
   
   <!-- Portfolio Section -->
-  <div class="w3-padding-64 w3-content" id="photos">
+  <div class="w3-padding-64 w3-content" id="projects">
     <h2 class="w3-text-light-grey">My Projects</h2>
-    <hr style="width:200px" class="w3-opacity">
+    
 
     <!-- Grid for photos -->
    
     <div class="w3-row-padding" style="margin:0 -16px">
         <div class="row">
              {{#each projects as |prj|}}
-            <div class="column d-flex align-items-stretch">
-              <div class="card">
+            <div class="w3-col m4 d-flex align-items-stretch pcard">
+              <div class="card" >
                 <h3>{{prj.name}}</h3>
                 <p>{{prj.description}}</p>
-                
+                <p>{{prj.link}}</p>
                 <p class="w3-wide">{{prj.project_technology}}</p>
                 
               </div>
@@ -86,12 +86,13 @@
   <!-- Contact Section -->
   <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
     <h2 class="w3-text-light-grey">Contact Me</h2>
-    <hr style="width:200px" class="w3-opacity">
+    
 
     <div class="w3-section">
       <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> {{location}}</p>
       
-      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: {{email}}</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> {{email}}</p>
+      <p><i class="fa fa-github fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> {{github}}</p>
     </div><br>
     
   <!-- End Contact Section -->
