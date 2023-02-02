@@ -1,0 +1,118 @@
+    <form action="action_page.php" method="post">
+      <div class="imgcontainer">
+        <img src="/images/wedevz-logo.png" alt="Avatar" class="avatar" />
+      </div>
+
+      <div class="center_block">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required />
+
+        <label for="psw"><b>Password</b></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="psw"
+          required
+        />
+        <button type="submit">Login</button>
+        <label> <input type="checkbox" name="remember" /> Remember Me </label>
+      </div>
+    </form>
+    <div class="center_block w3-center">
+      <div class="w3-container w3-center">
+        <h2>Don't Have an Account?</h2>
+        <h3>Click Below to Sign Up!</h3>
+      </div>
+      <div class="w3-container w3-center">
+        <!-- Button to open the modal -->
+        <button onclick="document.getElementById('id01').style.display='block'">
+          Sign Up
+        </button>
+      </div>
+    </div>
+    <!-- The Modal (contains the Sign Up form) -->
+    <div id="id01" class="modal">
+      <span
+        onclick="document.getElementById('id01').style.display='none'"
+        class="close"
+        title="Close Modal"
+        >X</span
+      >
+      <form class="modal-content" action="/action_page.php">
+        <div class="container">
+          <h1>Sign Up</h1>
+          <p>Please fill in this form to create an account.</p>
+          <hr />
+          <label for="first_name"
+            ><b>Name<span class="w3-text-red">*</span></b></label
+          >
+          <input type="text" placeholder="Enter Name" name="last_name" required />
+          <label for="last_name"
+            ><b>Last Name<span class="w3-text-red">*</span></b></label
+          >
+          <input
+            type="text"
+            placeholder="Enter Last Name"
+            name="last_name"
+            required
+          />
+          <label for="profile-picture"><b>Profile Picture</b></label>
+          <input type="file" name="profile-picture" accept="image/*" />
+          <br /><label for="age" placeholder="Enter Age"><b>Age</b></label>
+          <input type="number" name="age" min="1" max="100" />
+          <br /><label for="technologies" placeholder="Select Technologies"
+            ><b>Technologies<span class="w3-text-red">*</span></b></label
+          >
+          <input type="text" name="technologies" placeholder="Enter Technologies" />
+          
+          <label for="education"><b>Education</b></label>
+          <input type="text" name="education" placeholder="Enter Education" />
+          <label for="employment"><b>Current Employment</b></label>
+          <input type="text" name="employment" placeholder="Enter Employment" />
+          <label for="location"
+            ><b>Location<span class="w3-text-red">*</span></b></label
+          >
+          <input type="text" name="location" placeholder="Enter Location" />
+          <label for="github"><b>GitHub</b></label>
+          <input type="text" name="github" placeholder="Enter GitHub" />
+          <label for="email"
+            ><b>Email<span class="w3-text-red">*</span></b></label
+          >
+          <input type="text" placeholder="Enter Email" name="email" required />
+          <label for="psw"
+            ><b>Password<span class="w3-text-red">*</span></b></label
+          >
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="psw"
+            required
+          />
+          <label for="psw-repeat"
+            ><b>Repeat Password<span class="w3-text-red">*</span></b></label
+          >
+          <input
+            type="password"
+            placeholder="Repeat Password"
+            name="psw-repeat"
+            required
+          />
+          <label>
+            <input
+              type="checkbox"
+              checked="checked"
+              name="remember"
+              style="margin-bottom: 15px"
+            />
+            Remember Me
+          </label>
+
+          <p><span class="w3-text-red">*</span>Marked Fields are Mandatory.</p>
+
+          <div class="clearfix">
+            <button type="submit" class="signup">Sign Up</button>
+          </div>
+        </div>
+      </form>
+    </div>
+<script src="/public/js/login.js"></script>

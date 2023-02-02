@@ -32,6 +32,59 @@ User.init(
         len: [6],
       },
     },
+    first_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1],
+      },
+    },
+    last_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1],
+      },
+    },
+    age: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        isNumeric: true,
+      },
+    },
+    location: {
+      type: DataTypes.STRING,
+      validate: {
+        len: [1],
+      },
+    },
+    
+    user_pic: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        defaultValue:''
+    },
+    user_technology: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1],
+      },
+    },
+    education: {
+      type: DataTypes.STRING,
+    },
+    employer: {
+      type: DataTypes.STRING,
+    },
+    
+    bio: {
+      type: DataTypes.TEXT('long'),
+    },
+    github: {
+      type: DataTypes.STRING,
+    },
   },
   {
     hooks: {

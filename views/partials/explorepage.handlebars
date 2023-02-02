@@ -1,0 +1,38 @@
+<link rel="stylesheet" type="text/css" href="/wedevz/public/css/style.css">
+<!-- Page Content -->
+
+<div class="w3-padding-large">
+  <!-- Header/Home -->
+  <!-------------------------------------------------------------------------- HB -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">We</span>Devz</h1>
+    <h10>Explore Network</h10>
+    <i class="fa-regular fa-square-share-nodes fa-10px" style="color:#68447A; width:100px; height:100px"></i>
+  </header>
+    <!-------------------------------------------------------------------------- /HB -->
+<!-- CAROUSEL SECTION -->
+  <div class="media-scroller snaps-inline">
+    {{#each usergallery as |user|}}
+        <!-- pic 1 -->
+        <div class="profile-card">
+            <img src="https://res.cloudinary.com/dfh56dqku/image/upload/v1675255966/p1-modified_fzitz1.png" alt="Norway" class="w3-hover-opacity">        
+            <div class="profile-bottom-card">
+              <p style="font-size:24px"><b>{{user.first_name}} {{user.last_name}}</b></p>
+              <p style="font-style: italic">City: {{user.location}}</p>
+              <p style="font-style: italic">Employer: {{user.employer}}</p>
+              <ul style="list-style: none">
+                  <li >Expert in: {{user.user_technology}}</li>
+              </ul>
+              <p>{{user.github}}</p>
+            </div>
+        </div>
+    
+      
+    {{/each}}
+    </div> 
+    
+
+    <!-- END OF PROJECT SCROLLER -->
+</div>
+{{!-- {{> exploreportfolio }} --}}
+<footer></footer>
