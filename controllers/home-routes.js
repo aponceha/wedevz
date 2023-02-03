@@ -63,28 +63,55 @@ router.get("/", async (req, res, withAuth) => {
   }
 });
 
-router.get("/profile", async (req, res) => {
+router.get('/profile/:id', async (req, res) => {
   try {
-    const userData = await User.findAll({
+    const projectData = await User.findByPk(req.params.id, {
       include: [
-        {
-          model: Project,
-          attributes: ["name", "description", "link", "project_technology"],
-        },
+          {
+              model: Project,
+              attributes: ['name', 'description', 'link', 'project_technology'],
+          },
+         
       ],
     });
-    const usergallery = userData.map((user) => user.get({ plain: true }));
-    console.log(usergallery);
-    // Render Explore Page
-    res.render("./partials/profile", {
-      usergallery,
-      loggedIn: req.session.loggedIn,
+
+    const project = projectData.get({ plain: true });
+    console.log(project);
+    console.log(project.projects);
+    res.render('./partials/profile', {
+      ...project,
+      logged_in: req.session.loggedIn
     });
   } catch (err) {
-    console.log(err);
     res.status(500).json(err);
   }
 });
+
+// Edit a single user
+router.get('/editprofile/:id', async (req, res) => {
+  try {
+    const projectData = await User.findByPk(req.params.id, {
+      include: [
+          {
+              model: Project,
+              attributes: ['name', 'description', 'link', 'project_technology'],
+          },
+         
+      ],
+    });
+
+    const project = projectData.get({ plain: true });
+    console.log(project);
+    console.log(project.projects);
+    res.render('./partials/editprofile', {
+      ...project,
+      logged_in: req.session.loggedIn
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 
 router.get("/login", async (req, res) => {
   try {
