@@ -1,5 +1,12 @@
 /* LOGIN PAGE STYLING */
 
+.w3-container {
+    margin-top: 5px;
+}
+.page-break {
+    height:90px;
+    display:inline-block;
+}
 body {
   font-family: "Raleway", sans-serif;
 }
@@ -62,7 +69,7 @@ img.avatar {
 }
 
 .container {
-  padding: 16px;
+  /* padding: 16px; */
 }
 
 span.psw {
@@ -76,7 +83,7 @@ span.psw {
 }
 
 .container {
-  padding: 16px;
+  /* padding: 16px; */
 }
 
 .modal {
@@ -124,9 +131,9 @@ hr {
   content: "";
   clear: both;
   display: table;
-}
+} 
 
-@media screen and (max-width: 300px) {
+/* @media screen and (max-width: 300px) {
   .signupbtn {
     width: 100%;
   }
@@ -146,7 +153,6 @@ hr {
   gap: 1rem;
   grid-auto-flow: column;
   grid-auto-columns: 31%;
-  /* right: 300px; */
 
   padding: 1rem 1rem;
   overflow-x: auto;
@@ -155,6 +161,12 @@ hr {
 
 /* .project-scroll {
 
+} */
+
+/* @media only screen and (min-width: 300px) {
+  .p-contain {
+    display: block;
+  }
 } */
 
 .media-scroller--with-groups {
@@ -168,18 +180,19 @@ hr {
   height: auto;
 }
 .profile-bottom-card {
-  height: 50%;
+  height: 35%;
   border-radius: 20px;
   background-color: white;
   grid-template-rows: min-content;
   padding: 1rem;
+  color:#34223c;
+  overflow-y: scroll;
 }
 .profile-card {
   padding: 1rem;
-  background: lightgray;
-  border-radius: 2px;
   gap: 0.5rem;
   grid-template-rows: min-content;
+  
 }
 
 .profile-card > img {
@@ -188,18 +201,20 @@ hr {
   object-fit: cover;
   height: 50%;
   place-items: center;
+  height: fit-content;
 }
 .profile-project-bcard {
   padding: 1rem;
-  /* background: lightgray; */
+
   border-radius: 2px;
   gap: 0.5rem;
   grid-template-rows: min-content;
   height: 35%;
+  overflow-y: scroll;
 }
 
 .profile-project-bcard > img {
-  inline-size: 30%;
+  inline-size: 50%;
   aspect-ratio: 16 / 16;
   object-fit: cover;
   margin-bottom: 10px;
@@ -226,11 +241,13 @@ h10 {
 .upper-card {
   height: 37%;
   border-radius: 20px;
+  overflow-y: scroll;
 }
 
 .tech-card {
   height: 27%;
   border-radius: 20px;
+  overflow-y: scroll;
 }
 
 .w3-container {
@@ -267,12 +284,20 @@ h10 {
 }
 
 /* Float four columns side by side */
-.column {
+.pcard {
   float: left;
+<<<<<<< HEAD
   width: 25%;
   padding: 10px;
+=======
+  
+  padding: 10px ;
+>>>>>>> d05855ce8db73813bf754eac0618a63c5f5e41fd
 }
 
+.card {
+  border-radius: 20px;
+}
 /* Remove extra left and right margins, due to padding */
 .row {
   margin: 0 -5px;
@@ -293,6 +318,8 @@ h10 {
     margin-bottom: 20px;
   }
 }
+<<<<<<< HEAD
+=======
 
 /* Style the counter cards */
 .card {
@@ -302,15 +329,78 @@ h10 {
   background-color: #f1f1f1;
 }
 
-.w3-theme {
-  color: #fff !important;
-  background-color: #68447a !important;
+.w3-theme {color:#fff !important; background-color:#68447a !important}
+.w3-theme-d5 {color:#fff !important; background-color:#34223c !important}
+.w3-hover-theme:hover {color:#fff !important; background-color:#34223c !important}
+
+
+* {
+  box-sizing: border-box;
 }
-.w3-theme-d5 {
-  color: #fff !important;
-  background-color: #34223c !important;
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
 }
-.w3-hover-theme:hover {
-  color: #fff !important;
-  background-color: #34223c !important;
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
 }
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+ul {
+  columns: 6;
+  -webkit-columns: 6;
+  -moz-columns: 6;
+}
+>>>>>>> d05855ce8db73813bf754eac0618a63c5f5e41fd
