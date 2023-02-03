@@ -2,6 +2,7 @@ const { Model, DataTypes } = require("sequelize");
 const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");
 
+
 class Project extends Model {}
 
 Project.init(
@@ -39,9 +40,10 @@ Project.init(
     },
     user_id: {
       type: DataTypes.INTEGER,
-      referece: {
+      references: {
         model: "user",
         key: "id",
+      
       },
     },
     
