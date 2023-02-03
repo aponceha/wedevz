@@ -30,10 +30,10 @@
     <!-- END OF PROJECT SCROLLER -->
   <div class="media-scroller snaps-inline project-scroll" style="grid-auto-columns: 43%;">
   {{#each projectgallery as |project|}}
-    <div class="p-contain" style="display:inline-flex; flex-grow: 1; justify-content: center; padding-top: 30px; ">
+    
         
         <!--CARD START -->
-        <div class="profile-card " style="background-color: #34223c; width:530px; height: 696px; border-radius: 30px; margin-left: 15px;">
+        <div class="profile-card " style="display:flexbox;background-color: #34223c; height:auto">
             <!-- PROJECT TEXT BOX -->
             <div class="upper-card" style="padding: 1rem; height: 40%; color: black; background-color: white; margin-top: 15px; border-radius: 30px;">
                 <p><b style="font-size:30px">{{project.name}}</b></p>
@@ -62,7 +62,7 @@
             </div> 
           </div>
             
-      </div>
+      
       {{/each}}
     </div>
 </div>   
