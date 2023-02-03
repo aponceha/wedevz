@@ -29,7 +29,7 @@ router.get("/exploreportfolio", async (req, res) => {
     console.log(projectgallery);
     // Render Explore Page
     res.render("./partials/exploreportfolio", {
-      ...projectgallery,
+      projectgallery,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
