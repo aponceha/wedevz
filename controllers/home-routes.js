@@ -39,7 +39,7 @@ router.get("/exploreportfolio", async (req, res) => {
 });
 
 // GET all users for explore page
-router.get("/", async (req, res, withAuth) => {
+router.get("/", withAuth, async (req, res) => {
   try {
     const userData = await User.findAll({
       include: [

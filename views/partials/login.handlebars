@@ -1,35 +1,37 @@
-        <div class="imgcontainer">
+    <form method="POST" id="login-form">
+      <div class="imgcontainer">
         <img src="/images/wedevz-logo.png" alt="Avatar" class="avatar" />
       </div>
 
-    <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login"><b>E-Mail</b></label>
-        <input class="form-input" type="text" id="email-login" required />
-      </div>
-      <div class="form-group">
-        <label for="password-login"><b>Password</b></label>
-        <input class="form-input" type="password" id="password-login" required />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">Login</button>
+      <div class="center_block">
+        <label for="email"><b>E-Mail</b></label>
+        <input type="text" placeholder="Enter E-Mail" name="email" required />
+
+        <label for="psw"><b>Password</b></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="psw"
+          required
+        />
+        <button type="submit">Login</button>
         <label> <input type="checkbox" name="remember" /> Remember Me </label>
       </div>
     </form>
-    {{!-- <div class="center_block w3-center">
+    <div class="center_block w3-center">
       <div class="w3-container w3-center">
         <h2>Don't Have an Account?</h2>
         <h3>Click Below to Sign Up!</h3>
       </div>
       <div class="w3-container w3-center">
-        <!-- Button to open the modal -->
-        <button onclick="document.getElementById('id01').style.display='block'">
+        <button onclick="document.location.replace('')">
           Sign Up
         </button>
       </div>
-    </div> --}}
-    <!-- The Modal (contains the Sign Up form) -->
-    {{!-- <div id="id01" class="modal">
+    </div>
+
+
+    <div id="id01" class="modal">
       <span
         onclick="document.getElementById('id01').style.display='none'"
         class="close"
@@ -114,5 +116,6 @@
           </div>
         </div>
       </form>
-    </div> --}}
+    </div>
 <script src="/js/login.js"></script>
+<script src="/js/signup.js"></script>
