@@ -1,3 +1,5 @@
+
+<!-- Page Content -->
   <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center" style="width: 110px; background-color: #34223c">
     <!-- Avatar image in top left corner -->
     <i class="fa fa-share-alt w3-xxlarge w3-padding-large"></i>
@@ -20,49 +22,39 @@
     </a>
   </nav>
 <div class="w3-padding-large"id="main">
-  
-  <header class="w3-container w3-padding-32 w3-center"style ="background-color: #34223c" id="home">
+
+
+  <!-- Header/Home -->
+  <!-------------------------------------------------------------------------- HB -->
+  <header class="w3-container w3-padding-32 w3-center"style="background-color: #34223c" id="home">
     <h1 class="w3-jumbo"><span class="w3-hide-small">We</span>Devz</h1>
-    <h10>Explore Projects</h10>
-    
+    <h10>Explore Network</h10>
+    {{!-- <i class="fa-regular fa-square-share-nodes fa-10px" style="color:#68447A; width:100px; height:100px"></i> --}}
   </header>
+    <!-------------------------------------------------------------------------- /HB -->
+<!-- CAROUSEL SECTION -->
+  <div class="media-scroller snaps-inline">
+    {{#each usergallery as |user|}}
+        <!-- pic 1 -->
+        <div class="profile-card" style="display:flexbox">
+            <img src="https://res.cloudinary.com/dfh56dqku/image/upload/v1675255966/p3-modified_uu05ep.png" alt="Norway" class="w3-hover-opacity">        
+            <div class="profile-bottom-card">
+              <p style="font-size:24px"><b>{{user.first_name}} {{user.last_name}}</b></p>
+              <p style="display:block; font-style: italic">City: {{user.location}}</p>
+              <p style="display:block; font-style: italic">Employer: {{user.employer}}</p>
+              <ul style="display:inline; list-style: none">
+                  <span style="">Expert in: {{user.user_technology}}</span>
+              </ul>
+              <p>{{user.github}}</p>
+            </div>
+        </div>
+        
+    
+      
+    {{/each}}
+    </div> 
+
 
     <!-- END OF PROJECT SCROLLER -->
-  <div class="media-scroller snaps-inline project-scroll" style="grid-auto-columns: 43%;">
-  {{#each projectgallery as |project|}}
-    <div class="p-contain" style="display:inline-flex; flex-grow: 1; justify-content: center; padding-top: 30px; ">
-        
-        <!--CARD START -->
-        <div class="profile-card " style="background-color: #34223c; width:530px; height: 696px; border-radius: 30px; margin-left: 15px;">
-            <!-- PROJECT TEXT BOX -->
-            <div class="upper-card" style="padding: 1rem; height: 40%; color: black; background-color: white; margin-top: 15px; border-radius: 30px;">
-                <p><b style="font-size:30px">{{project.name}}</b></p>
-                <p>{{project.description}}</p>
-                <p style="font-weight: bold">Technologies:</p><p >{{project.project_technology}}</p>
-
-                <p style="font-weight: bold">Project Link:</p> <p>{{project.link}}</p>
-            </div>
-            <!-- BOTTOM HALF CARD DIV -->
-            <div class="profile-bottom-card " style="background-color: #34223c; display:inline; justify-content: baseline;">
-                <!-- IMAGE HALF ROW -->
-                <img src="https://res.cloudinary.com/dfh56dqku/image/upload/v1675255966/p1-modified_fzitz1.png" alt="Norway" style="width:50%; padding-top: 15px;" class=>
-                <!-- NAME LOCATION FIELDS -->
-                <div class="name-card" style="display:inline-block; padding-left: 5px; color: black; background-color: #34223c">
-                    <p style="display:block; padding-top: 15px; font-size: large; color: white"><b>{{project.user.first_name}} {{project.user.last_name}}</b></p>
-                    <p style="display:block; font-style: font-weight: bold; color: white; italic; background-color: #34223c;">{{project.user.location}}</p>
-                </div>
-                <!-- Technologies  -->
-                <div class="tech-card " style="padding: 1rem; height: 20%; background-color: white; padding-top: 5px; border-radius: 30px;">
-                    <p style="font-weight: bold"> Technologies Specialization</p>
-                    <p style="font-style: italic">{{project.user.user_technology}}</p>
-
-                </div>
-            
-            <!-- END OF BOTTOM HALF CARD DIV -->
-            </div> 
-          </div>
-            
-      </div>
-      {{/each}}
-    </div>
-</div>  
+</div>
+{{!-- {{> exploreportfolio }} --}}
