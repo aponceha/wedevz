@@ -61,6 +61,7 @@ button {
   opacity: 0.9;
   max-width: fit-content;
   margin-bottom: 200px;
+  border-radius: 20px;
 }
 
 button:hover {
