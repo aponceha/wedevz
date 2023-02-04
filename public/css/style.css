@@ -1,8 +1,16 @@
 /* LOGIN PAGE STYLING */
 
-.w3-container {
-  margin-top: 5px;
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #533661;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
 }
+
 .page-break {
   height: 90px;
   display: inline-block;
@@ -18,13 +26,7 @@ h4,
 h5,
 h6 {
   font-family: "Raleway", sans-serif;
-}
-
-.center_block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+  text-align: center;
 }
 
 input[type="text"],
@@ -37,6 +39,10 @@ input[type="password"] {
   background: #f1f1f1;
 }
 
+input[type="number"] {
+  width: 20%;
+}
+
 input[type="text"]:focus,
 input[type="password"]:focus {
   background-color: #ddd;
@@ -44,14 +50,17 @@ input[type="password"]:focus {
 }
 
 button {
+  display: flex;
   background-color: #68447a;
   color: white;
   padding: 14px 20px;
-  margin: 8px 0;
+  margin: auto;
   border: none;
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
+  max-width: fit-content;
+  margin-bottom: 200px;
 }
 
 button:hover {
@@ -61,6 +70,7 @@ button:hover {
 .imgcontainer {
   text-align: center;
   margin: 24px 0 12px 0;
+  padding-bottom: 70px;
 }
 
 img.avatar {
@@ -68,71 +78,15 @@ img.avatar {
   border-radius: 50%;
 }
 
-.container {
-  /* padding: 16px; */
-}
-
 span.psw {
   float: right;
   padding-top: 16px;
 }
 
-.signupbtn {
-  float: left;
-  width: 50%;
+.form-group {
+  max-width: 305px;
+  margin: auto;
 }
-
-.container {
-  /* padding: 16px; */
-}
-
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: #474e5d;
-  padding-top: 50px;
-}
-
-.modal-content {
-  color: rgb(0, 0, 0);
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
-.close {
-  position: absolute;
-  right: 35px;
-  top: 15px;
-  font-size: 40px;
-  font-weight: bold;
-  color: #f1f1f1;
-}
-
-.close:hover,
-.close:focus {
-  color: #f44336;
-  cursor: pointer;
-}
-
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
 /* @media screen and (max-width: 300px) {
   .signupbtn {
     width: 100%;
