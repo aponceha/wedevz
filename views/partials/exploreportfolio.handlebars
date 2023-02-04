@@ -1,35 +1,58 @@
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+  <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center" style="width: 110px; background-color: #34223c">
+    <!-- Avatar image in top left corner -->
+    <i class="fa fa-share-alt w3-xxlarge w3-padding-large"></i>
+    <p>WeDevz</p>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d5">
+      <i class="fa fa-home w3-xxlarge"></i>
+      <p>HOME</p>
+    </a>
+    <a href="/profile/1" class="w3-bar-item w3-button w3-padding-large w3-hover-theme ">
+      <i class="fa fa-user w3-xxlarge"></i>
+      <p>PROFILE</p>
+    </a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-theme">
+      <i class="fa fa-th-list w3-xxlarge"></i>
+      <p>PROJECT</p>
+    </a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-theme">
+      <i class="fa fa-envelope w3-xxlarge"></i>
+      <p>CONTACT</p>
+    </a>
+  </nav>
+<div class="w3-padding-large"id="main">
+  
+  <header class="w3-container w3-padding-32 w3-center"style ="background-color: #34223c" id="home">
     <h1 class="w3-jumbo"><span class="w3-hide-small">We</span>Devz</h1>
     <h10>Explore Projects</h10>
-    <i class="fa-regular fa-square-share-nodes fa-10px" style="color:#68447A; width:100px; height:100px"></i>
+    
   </header>
 
     <!-- END OF PROJECT SCROLLER -->
   <div class="media-scroller snaps-inline project-scroll" style="grid-auto-columns: 43%;">
   {{#each projectgallery as |project|}}
-    <div class="w3-row-padding" style="display:flex; justify-content: center; padding-top: 30px; align-items: center;">
+    
         
         <!--CARD START -->
-        <div class="profile-card w3-container w3-margin-bottom" style="background-color: #34223c; width:530px; height: 696px; border-radius: 30px; margin-left: 15px;">
+        <div class="profile-card " style="display:flexbox;background-color: #34223c; height:auto">
             <!-- PROJECT TEXT BOX -->
-            <div class="w3-container w3-white" style="margin-top: 15px; border-radius: 30px;">
-                <p><b>{{project.name}}</b></p>
+            <div class="upper-card" style="padding: 1rem; height: 40%; color: black; background-color: white; margin-top: 15px; border-radius: 30px;">
+                <p><b style="font-size:30px">{{project.name}}</b></p>
                 <p>{{project.description}}</p>
-                <p>Technologies: {{project.project_technology}}</p>
+                <p style="font-weight: bold">Technologies:</p><p >{{project.project_technology}}</p>
 
-                <p>Project Link: {{project.link}}</p>
+                <p style="font-weight: bold">Project Link:</p> <p>{{project.link}}</p>
             </div>
             <!-- BOTTOM HALF CARD DIV -->
-            <div class="profile-bottom-card w3-container" style="display:inline; justify-content: baseline;">
+            <div class="profile-bottom-card " style="background-color: #34223c; display:inline; justify-content: baseline;">
                 <!-- IMAGE HALF ROW -->
-                <img src="https://res.cloudinary.com/dfh56dqku/image/upload/v1675255966/p1-modified_fzitz1.png" alt="Norway" style="width:50%; padding-top: 15px;" class="w3-hover-opacity">
+                <img src="https://res.cloudinary.com/dfh56dqku/image/upload/v1675255966/p1-modified_fzitz1.png" alt="Norway" style="width:50%; padding-top: 15px;" class=>
                 <!-- NAME LOCATION FIELDS -->
                 <div class="name-card" style="display:inline-block; padding-left: 5px; color: black; background-color: #34223c">
                     <p style="display:block; padding-top: 15px; font-size: large; color: white"><b>{{project.user.first_name}} {{project.user.last_name}}</b></p>
                     <p style="display:block; font-style: font-weight: bold; color: white; italic; background-color: #34223c;">{{project.user.location}}</p>
                 </div>
                 <!-- Technologies  -->
-                <div class="tech-card w3-container w3-white" style="padding-top: 5px; border-radius: 30px;">
+                <div class="tech-card " style="padding: 1rem; height: 20%; background-color: white; padding-top: 5px; border-radius: 30px;">
                     <p style="font-weight: bold"> Technologies Specialization</p>
                     <p style="font-style: italic">{{project.user.user_technology}}</p>
 
@@ -39,8 +62,7 @@
             </div> 
           </div>
             
-      </div>
+      
       {{/each}}
     </div>
-
-        
+</div>   

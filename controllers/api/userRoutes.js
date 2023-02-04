@@ -47,6 +47,37 @@ router.get("/:id", (req, res) => {
     });
 });
 
+
+router.post("/1", (req, res) => {
+  User.create({
+    username: req.body.username,
+    email: req.body.email,
+    password: req.body.password,
+    location: req.body.location,
+    employer: req.body.employer,
+    first_name: req.body.first_name,
+    last_name: req.body.last_name,
+    github: req.body.github,
+    user_technology: req.body.user_technology,
+    user_pic: req.body.user_pic,
+    age: req.body.age,
+  })
+    .then((dbUserData) => {
+      req.session.save(() => {
+        req.session.user_id = dbUserData.id;
+        req.session.username = dbUserData.username;
+        req.session.loggedIn = true;
+
+        res.json(dbUserData);
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+
 // POST a new user
 router.post("/", (req, res) => {
   User.create({
