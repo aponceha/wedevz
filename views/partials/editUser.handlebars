@@ -1,0 +1,108 @@
+
+
+
+<div class="content" id="main">
+  <h2>Edit Profile</h2>
+<div class="container formColor">
+      <form class="form update-profile-form">
+        <div class="row">
+        <div class="row">
+        <div class="col-25">
+          <label for="fname">First Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="profile_fname" name="firstname" placeholder="Your name.." value="{{first_name}}" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Last Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="profile_lname" name="lastname" placeholder="Your last name.." value="{{last_name}}" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="age">Age</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="profile_age" name="age" placeholder="Your age.." value="{{age}}" required>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-25">
+            <label for="description">Tell us about yourself</label>
+          </div>
+          <div class="col-75">
+            <textarea id="profile_description" name="description" placeholder="Write something.."  style="height:100px" required>{{bio}}</textarea>
+          </div>
+      </div>
+      
+      <div class="row">
+          <div class="col-25">
+            <label for="technologies">Technologies</label>
+          </div>
+          <div class="col-75">
+              <input type="text" id="profile_technologies" name="technologies" placeholder="Technologies.." value="{{user_technology}}">
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-25">
+            <label for="github">Github</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="profile_github" name="github" placeholder="Github.." value="{{github}}">
+          </div>
+      </div>
+     
+      <div class="row">
+          <div class="col-25">
+              <label for="location">Location</label>
+          </div>
+          <div class="col-75">
+              <input type="text" id="profile_location" name="location" placeholder="Location.." value="{{location}}">
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-25">
+              <label for="employer">Employer</label>
+          </div>
+          <div class="col-75">
+              <input type="text" id="profile_employer" name="employer" placeholder="Enter employer.." value="{{employer}}">
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-25">
+              <label for="job">Education</label>
+          </div>
+          <div class="col-75">
+              <input type="text" id="profile_education" name="education" placeholder="Enter education.." value="{{education}}">
+          </div>
+      </div>
+     
+       <div class="row">
+        <div class="col-75"></div>
+        <div class="col-25">
+          <button class="btn btn-primary"  data-id="{{user_id}}">Submit</button>
+        </div>
+      </div>
+       
+
+      </form>
+
+  <div class="col-25">
+    <button class="w3-button w3-round-xxlarge w3-theme" onclick="document.location.replace('/addproject/{{user_id}}');">Add Project</button>
+  </div>
+</div>
+    
+
+</div>
+
+
+<footer class="footer">
+    <span class="text-muted">© 2023 WeDevz</span>
+</footer>
+
+
+<script src="/js/editprofile.js"></script>

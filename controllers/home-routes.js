@@ -31,6 +31,7 @@ router.get("/exploreportfolio", async (req, res) => {
     res.render("./partials/exploreportfolio", {
       projectgallery,
       loggedIn: req.session.loggedIn,
+      user_id: req.session.user_id
     });
   } catch (err) {
     console.log(err);
@@ -39,7 +40,7 @@ router.get("/exploreportfolio", async (req, res) => {
 });
 
 // GET all users for explore page
-router.get("/", async (req, res, withAuth) => {
+router.get("/homepage", async (req, res) => {
   try {
     const userData = await User.findAll({
       include: [
@@ -56,12 +57,14 @@ router.get("/", async (req, res, withAuth) => {
     res.render("./partials/homepage", {
       usergallery,
       loggedIn: req.session.loggedIn,
+      user_id: req.session.user_id
     });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
+
 
 router.get('/profile/:id', async (req, res) => {
   try {
@@ -76,11 +79,11 @@ router.get('/profile/:id', async (req, res) => {
     });
 
     const project = projectData.get({ plain: true });
-    console.log(project);
-    console.log(project.projects);
+    
     res.render('./partials/profile', {
       ...project,
-      logged_in: req.session.loggedIn
+      loggedIn: req.session.loggedIn,
+      user_id: req.session.user_id
     });
   } catch (err) {
     res.status(500).json(err);
@@ -103,9 +106,10 @@ router.get('/editprofile/:id', async (req, res) => {
     const project = projectData.get({ plain: true });
     console.log(project);
     console.log(project.projects);
-    res.render('./partials/editprofile', {
+    res.render('./partials/editUser', {
       ...project,
-      logged_in: req.session.loggedIn
+      loggedIn: req.session.loggedIn,
+      user_id: req.session.user_id
     });
   } catch (err) {
     res.status(500).json(err);
@@ -113,15 +117,76 @@ router.get('/editprofile/:id', async (req, res) => {
 });
 
 
-router.get("/login", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     res.render("./partials/login", {
       loggedIn: req.session.loggedIn,
+      user_id: req.session.user_id
     });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
+
+router.get('/addproject/:id', async (req, res) => {
+  try {
+    const projectData = await User.findByPk(req.params.id, {
+      include: [
+          {
+              model: Project,
+              attributes: ['name', 'description', 'link', 'project_technology'],
+          },
+         
+      ],
+    });
+
+    const project = projectData.get({ plain: true });
+    console.log(project);
+    console.log(project.projects);
+    res.render('./partials/addproject2.handlebars', {
+      ...project,
+      loggedIn: req.session.loggedIn,
+      user_id: req.session.user_id
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// router.get("/addproject/:id", async (req, res) => {
+//   try {
+//     const projectData = await Project.findByPk(req.params.id,{
+//       include: [
+//         {
+//           model: User,
+//           attributes: [
+//             "first_name",
+//             "last_name",
+//             "github",
+//             "user_technology",
+//             "location",
+//             "user_pic",
+//           ],
+//         },
+//       ],
+//     });
+
+//     // randomization of array
+//     const projectgallery = projectData.map((project) =>
+//       project.get({ plain: true })
+//     );
+//     console.log(projectgallery);
+//     // Render Explore Page
+//     res.render("./partials/addproject.handlebars", {
+//       projectgallery,
+//       loggedIn: req.session.loggedIn,
+//       user_id: req.session.user_id
+//     });
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).json(err);
+//   }
+// });
 
 module.exports = router;
