@@ -6,33 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WeDevz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ 
   <link
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap"
         rel="stylesheet"
   />
 
   <link rel="stylesheet" href="/css/style.css">
-  
 </head>
 
-<body class="w3-theme-d5">
-    
+<body class="bkgColor">
+      {{#if loggedIn}} 
+      <div class="sidebar navColor" id="navlist">
+            <a class ="btn" href="/homepage" style="font-size: 18px;"><i class="fa fa-home" style="font-size: 46px;"></i><br>HOME</a>
+            <a class="btn" href="/profile/{{user_id}}" style="font-size: 18px;"><i class="fa fa-user" style="font-size: 46px;"></i><br>PROFILE</a>
+            <a class="btn" href="/exploreportfolio" style="font-size: 18px;"><i class="fa fa-th-list" style="font-size: 46px;"></i><br>PROJECT</a>
+            <a class="btn" href="" style="font-size: 18px;" id="logout"><i class="fa fa-sign-out" style="font-size: 46px;"></i><br>LOGOUT</a>
+      </div>
+      {{/if}} 
+      
       <!-- Render the sub layout -->
       {{{ body }}}
     
-    <footer>
-      
-    </footer>
-
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
+   
+<script src="/js/logout.js"></script>
 </body>
 
 </html>
-
