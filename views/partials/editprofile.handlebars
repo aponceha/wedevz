@@ -1,0 +1,248 @@
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <i class="fa fa-share-alt w3-xxlarge w3-padding-large"></i>
+  <p>WeDevz</p>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d5">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-theme ">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>PROFILE</p>
+  </a>
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-theme">
+    <i class="fa fa-th-list w3-xxlarge"></i>
+    <p>PROJECT</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-theme">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-theme-d5 w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">PROFILE</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PROJECT</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+<h2>Edit Profile</h2>
+
+<div class="container">
+  <form  method="post" id="update-profile-form">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="profile_fname" name="firstname" placeholder="Your name.." value="{{first_name}}" required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="profile_lname" name="lastname" placeholder="Your last name.." value="{{last_name}}" required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="age">Age</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="profile_age" name="age" placeholder="Your age.." value="{{age}}" required>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+          <label for="description">Tell us about yourself</label>
+        </div>
+        <div class="col-75">
+          <textarea id="profile_description" name="description" placeholder="Write something.." value="{{bio}}" style="height:100px" required></textarea>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-25">
+          <label for="technologies">Technologies</label>
+        </div>
+        <div class="col-75">
+            <input type="text" id="profile_technologies" name="technologies" placeholder="Technologies.." value="{{user_technology}}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+          <label for="github">Github</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="profile_github" name="github" placeholder="Github.." value="{{github}}">
+        </div>
+    </div>
+   
+    <div class="row">
+        <div class="col-25">
+            <label for="location">Location</label>
+        </div>
+        <div class="col-75">
+            <input type="text" id="profile_location" name="location" placeholder="Location.." value="{{location}}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+            <label for="employer">Employer</label>
+        </div>
+        <div class="col-75">
+            <input type="text" id="profile_employer" name="employer" placeholder="Enter employer.." value="{{employer}}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+            <label for="job">Education</label>
+        </div>
+        <div class="col-75">
+            <input type="text" id="profile_education" name="education" placeholder="Enter education.." value="{{education}}">
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-75"></div>
+        <div class="col-25">
+             <button type="submit" data-id="{{id}}">Submit</button>
+        </div>
+    </div>
+  </form>
+</div>
+<!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="projects">
+    <h2 class="w3-text-light-grey">My Projects</h2>
+    
+
+    <!-- Grid for photos -->
+   
+    <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="row">
+             {{#each projects as |prj|}}
+            <div class="w3-col m4 d-flex align-items-stretch pcard">
+              <div class="card" >
+                <h3>{{prj.name}}</h3>
+                <p>{{prj.description}}</p>
+                <p>{{prj.link}}</p>
+                <p class="w3-wide">{{prj.project_technology}}</p>
+                
+              </div>
+            </div>
+             {{/each}}
+        </div>
+    <!-- End photo grid -->
+    </div>
+  <!-- End Portfolio Section -->
+ 
+  </div>
+<div class="row">
+        <div class="w3-container w3-center">
+            <!-- Button to open the modal -->
+            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button">
+              Add Project
+            </button>
+          </div>
+</div>
+
+<div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-theme-d5" style="max-width:600px">
+
+      <div class="w3-center"><br>
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+        
+      </div>
+
+      <form class="w3-container" action="/action_page.php">
+        <div class="w3-section">
+          <label><b>Project Name</b></label>
+          <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Project Name" name="project_name" id="project_name" required>
+          <label><b>Project Desription</b></label>
+          <textarea class="w3-input w3-border" type="text" placeholder="Project Description.." name="project_desc" id="project_desc"></textarea>
+         <label><b>Project Link</b></label>
+          <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Project Link" name="project_link" id="project_link" >
+          <label><b>Technology Used</b></label>
+          <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Technology" name="project_tech" id="project_tech" required>
+          
+          <button data-id = "{{id}}"class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Add</button>
+          
+        </div>
+      </form>
+
+      <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+        <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-red">Cancel</button>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+ <!-- The Modal (contains the Sign Up form) -->
+ <div id="id01" class="w3-modal">
+    <span
+      onclick="document.getElementById('id01').style.display='none'"
+      class="close"
+      title="Close Modal"
+      >X</span
+    >
+    <form class="modal-content" id="add-project">
+      <div class="container">
+        <div class="row">
+            <div class="col-25">
+              <label for="pname">Project Name</label>
+            </div>
+            <div class="col-50">
+              <input type="text" id="pname" name="projectname" placeholder="Enter project name.." required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="description">Description</label>
+              </div>
+              <div class="col-50">
+                <textarea type="text" id="description" name="pdescription" placeholder="Enter project description..">
+              </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+              <label for="plink">Project Link</label>
+            </div>
+            <div class="col-50">
+              <input type="text" id="plink" name="projectlink" placeholder="Enter project link.." required>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-25">
+              <label for="technologies">Technologies</label>
+            </div>
+            <div class="col-50">
+                <input type="technologies" id="pltechnologiesink" name="projectTech" placeholder="Enter technologies.." required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-75"></div>
+            <div class="col-25">
+                <input type="submit" value="Submit">
+            </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>
+
+{{!-- <script src="/public/js/editprofile.js"></script> --}}
+<script src="/public/js/createproject.js"></script>

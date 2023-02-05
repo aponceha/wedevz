@@ -1,6 +1,6 @@
 const { Project, User } = require("../../models");
 const router = require("express").Router();
-const bcrypt = require("bcrypt");
+// const bcrypt = require("bcrypt");
 
 // GET all users
 router.get("/", (req, res) => {
@@ -47,7 +47,6 @@ router.get("/:id", (req, res) => {
     });
 });
 
-
 router.post("/1", (req, res) => {
   User.create({
     username: req.body.username,
@@ -76,7 +75,6 @@ router.post("/1", (req, res) => {
       res.status(500).json(err);
     });
 });
-
 
 // POST a new user
 router.post("/", (req, res) => {
@@ -156,8 +154,10 @@ router.post("/login", async (req, res) => {
       res.status(400).json({ message: "Incorrect email, please try again" });
       return;
     }
-    const validPassword = userData.checkPassword(req.body.password);
-    if (!validPassword) {
+    const userPassword = await User.findOne({
+      where: { password: req.body.password },
+    });
+    if (!userPassword) {
       res.status(400).json({ message: "Incorrect password, please try again" });
       return;
     }

@@ -83,7 +83,7 @@ const editProfileHandler = async (event) => {
           if (event.target.hasAttribute('data-id')) {
             const id = event.target.getAttribute('data-id');
             console.log("id: "+id)
-          const response = await fetch(`/api/editprofile/${id}`, {
+          const response = await fetch(`/api/user/editprofile/${id}`, {
             method: "POST",
             body: JSON.stringify({ fname, lname, age, location, user_technology, education, employer, description,  github }),
             headers: { "Content-Type": "application/json" },

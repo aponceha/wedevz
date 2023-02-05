@@ -12,9 +12,9 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/");
+      document.location.replace("/exploreportfolio");
     } else {
-      console.log(err);
+      alert("Failed to log in");
     }
   }
 };
