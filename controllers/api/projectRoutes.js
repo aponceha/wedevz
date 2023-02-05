@@ -39,7 +39,6 @@ router.post("/", (req, res) => {
     link: req.body.link,
     project_technology: req.body.project_technology,
     user_id: req.body.user_id,
-    
   })
     .then((dbProjectData) => res.json(dbProjectData))
     .catch((err) => {
@@ -57,7 +56,6 @@ router.put("/:id", (req, res) => {
       link: req.body.link,
       project_technology: req.body.project_technology,
       user_id: req.body.user_id,
-      
     },
     {
       where: {

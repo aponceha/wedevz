@@ -1,10 +1,11 @@
 const router = require("express").Router();
 const { User } = require("../../models");
-//const withAuth = require('../../utils/auth');
 
 
 // UPDATE a profile
 router.post("/:id", (req, res) => {
+  console.log("router inside post")
+  try {
     console.log("router put")
   User.update(
     {
@@ -37,6 +38,9 @@ router.post("/:id", (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
+} catch (err) {
+    res.status(400).json(err);
+  }
 });
 
 

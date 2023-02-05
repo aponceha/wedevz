@@ -88,7 +88,7 @@ span.psw {
   max-width: 305px;
   margin: auto;
 }
-/* @media screen and (max-width: 300px) {
+@media screen and (max-width: 300px) {
   .signupbtn {
     width: 100%;
   }
@@ -101,7 +101,167 @@ span.psw {
   }
 }
 
-/* EXPLORE PAGE STYLING */
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 120px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-size: 36px;
+}
+
+.sidebar a.active {
+  background-color: #34223c;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  width: 80%;
+  margin-left: 200px;
+  padding: 1px 16px;
+  /* height: 1000px; */
+}
+
+.navColor {
+  color: #fff !important;
+  background-color: #68447a !important;
+}
+.bkgColor {
+  color: #fff !important;
+  background-color: #34223c !important;
+}
+.formColor {
+  color: #fff !important;
+  background-color: #a884ba !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+#add-proj-btn {
+  background-color: #68447a;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#edit-proj-btn {
+  background-color: #380452;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#edit-proj-btn:hover {
+  background-color: #555;
+  color: white;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+* Float four columns side by side */ #pcard {
+  /* float: left; */
+  padding: 10px;
+  padding-right: 10px;
+}
+
+.card {
+  border-radius: 20px;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  color: #34223c;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {
+    float: left;
+  }
+  div.content {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
 
 .media-scroller {
   display: grid;
@@ -115,7 +275,6 @@ span.psw {
 }
 
 /* .project-scroll {
-
 } */
 
 /* @media only screen and (min-width: 300px) {
@@ -202,168 +361,4 @@ h10 {
   height: 27%;
   border-radius: 20px;
   overflow-y: scroll;
-}
-
-.w3-container {
-  margin-top: 5px;
-}
-.page-break {
-  height: 90px;
-  display: inline-block;
-}
-
-/* PROFILE PAGE STYLING */
-
-.w3-row-padding img {
-  margin-bottom: 12px;
-}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {
-  width: 120px;
-  background: #533661;
-}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {
-  margin-left: 120px;
-}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {
-  #main {
-    margin-left: 0;
-  }
-}
-
-* {
-  box-sizing: border-box;
-}
-
-/* Float four columns side by side */
-.pcard {
-  float: left;
-  padding: 10px;
-  width: 25%;
-  padding: 10px;
-}
-
-.card {
-  border-radius: 20px;
-}
-/* Remove extra left and right margins, due to padding */
-.row {
-  margin: 0 -5px;
-}
-/* Remove extra left and right margins, due to padding */
-.row {
-  margin: 0 -5px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive columns */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-}
-
-/* Style the counter cards */
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  text-align: center;
-  background-color: #f1f1f1;
-}
-
-.w3-theme {
-  color: #fff !important;
-  background-color: #68447a !important;
-}
-.w3-theme-d5 {
-  color: #fff !important;
-  background-color: #34223c !important;
-}
-.w3-hover-theme:hover {
-  color: #fff !important;
-  background-color: #34223c !important;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-input[type="text"],
-select,
-textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
-
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-}
-
-input[type="submit"] {
-  background-color: #04aa6d;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
-}
-
-input[type="submit"]:hover {
-  background-color: #45a049;
-}
-
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-}
-
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .col-25,
-  .col-75,
-  input[type="submit"] {
-    width: 100%;
-    margin-top: 0;
-  }
-}
-
-ul {
-  columns: 6;
-  -webkit-columns: 6;
-  -moz-columns: 6;
 }

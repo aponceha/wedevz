@@ -1,0 +1,63 @@
+
+
+
+<div class="content" id="main">
+  <h2>Add Project</h2>
+<div class="container formColor">
+      <form class="form add-project-form">
+        <div class="row">
+        <div class="row">
+        <div class="col-25">
+          <label for="name">Project Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="name" name="name" placeholder="Your name.." required>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-25">
+            <label for="description">Describe your project</label>
+          </div>
+          <div class="col-75">
+            <textarea id="description" name="description" placeholder="Write something.."  style="height:100px" required></textarea>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-25">
+            <label for="github">Project Link</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="link" name="github" placeholder="Github link.." >
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-25">
+            <label for="project_technology">Technologies</label>
+          </div>
+          <div class="col-75">
+              <input type="text" id="project_technology" name="project_technology" placeholder="Technologies.." >
+          </div>
+      </div>
+
+       <div class="row">
+        <div class="col-75"></div>
+        <div class="col-25">
+          <button class="btn btn-primary"  data-id="{{user_id}}">Add Project</button>
+        </div>
+      </div>
+       
+
+      </form>
+
+</div>
+    
+
+</div>
+
+
+<footer class="footer">
+    <span class="text-muted">© 2023 WeDevz</span>
+</footer>
+
+
+<script src="/js/createproject.js"></script>

@@ -34,7 +34,7 @@ const signUp = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/exploreportfolio");
+      document.location.replace("/homepage");
     } else {
       alert('Failed to sign up.');
     }
