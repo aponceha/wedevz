@@ -12,6 +12,7 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
+      
       document.location.replace("/exploreportfolio");
     } else {
       alert("Failed to log in");

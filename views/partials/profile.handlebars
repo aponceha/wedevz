@@ -1,16 +1,10 @@
 
 
 
-<div class="sidebar navColor">
-  <a href="#home" style="font-size: 18px;"><i class="fa fa-home" style="font-size: 46px;"></i><br>HOME</a>
-  <a class="active" style="font-size: 18px;"><i class="fa fa-user" style="font-size: 46px;"></i><br>PROFILE</a>
-  <a href="#contact" style="font-size: 18px;"><i class="fa fa-th-list" style="font-size: 46px;"></i><br>PROJECT</a>
-  <a href="#about" style="font-size: 18px;"><i class="fa fa-envelope" style="font-size: 46px;"></i><br>CONTACT</a>
-  <a href="#about" style="font-size: 18px;"><i class="fa fa-sign-out" style="font-size: 46px;"></i><br>LOGOUT</a>
-</div>
+
 
 <!-- Page Content -->
-<div class="w3-padding-large" id="main">
+<div class="content w3-padding-large" >
   <!-- Header/Home -->
   <header class="w3-container w3-padding-32 w3-center w3-theme-d5" id="home">
     <img src={{user_pic}} >
@@ -18,7 +12,7 @@
   </header>
   <div class="col-75"></div>
   <div class="col-25">
-    <button class="w3-button w3-round-xxlarge w3-theme" onclick="openpage(1)">Edit Profile</button>
+    <button class="w3-button w3-round-xxlarge w3-theme" onclick="openpage({{user_id}})">Edit Profile</button>
   </div>
   <!-- About Section -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
