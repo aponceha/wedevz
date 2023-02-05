@@ -1,152 +1,103 @@
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <!-- Avatar image in top left corner -->
-  <i class="fa fa-share-alt w3-xxlarge w3-padding-large"></i>
-  <p>WeDevz</p>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d5">
-    <i class="fa fa-home w3-xxlarge"></i>
-    <p>HOME</p>
-  </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-theme ">
-    <i class="fa fa-user w3-xxlarge"></i>
-    <p>PROFILE</p>
-  </a>
-  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-theme">
-    <i class="fa fa-th-list w3-xxlarge"></i>
-    <p>PROJECT</p>
-  </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-theme">
-    <i class="fa fa-envelope w3-xxlarge"></i>
-    <p>CONTACT</p>
-  </a>
-</nav>
+<div class="sidebar navColor">
+  <a class="active" href="#home" style="font-size: 18px;"><i class="fa fa-home" style="font-size: 46px;"></i><br>HOME</a>
+  <a href="#news" style="font-size: 18px;"><i class="fa fa-user" style="font-size: 46px;"></i><br>PROFILE</a>
+  <a href="#contact" style="font-size: 18px;"><i class="fa fa-th-list" style="font-size: 46px;"></i><br>PROJECT</a>
+  <a href="#about" style="font-size: 18px;"><i class="fa fa-envelope" style="font-size: 46px;"></i><br>CONTACT</a>
+  <a href="#about" style="font-size: 18px;"><i class="fa fa-sign-out" style="font-size: 46px;"></i><br>LOGOUT</a>
+</div>
 
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-theme-d5 w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">PROFILE</a>
-    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PROJECT</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+
+
+<div class="content" id="main">
+  <h2>Edit Profile</h2>
+  
+  <div class="container formColor">
+    <form  class = "form" id="update-profile-form">
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">First Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="profile_fname" name="firstname" placeholder="Your name.." value="{{first_name}}" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Last Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="profile_lname" name="lastname" placeholder="Your last name.." value="{{last_name}}" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="age">Age</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="profile_age" name="age" placeholder="Your age.." value="{{age}}" required>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-25">
+            <label for="description">Tell us about yourself</label>
+          </div>
+          <div class="col-75">
+            <textarea id="profile_description" name="description" placeholder="Write something.." value="{{bio}}" style="height:100px" required></textarea>
+          </div>
+      </div>
+      
+      <div class="row">
+          <div class="col-25">
+            <label for="technologies">Technologies</label>
+          </div>
+          <div class="col-75">
+              <input type="text" id="profile_technologies" name="technologies" placeholder="Technologies.." value="{{user_technology}}">
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-25">
+            <label for="github">Github</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="profile_github" name="github" placeholder="Github.." value="{{github}}">
+          </div>
+      </div>
+     
+      <div class="row">
+          <div class="col-25">
+              <label for="location">Location</label>
+          </div>
+          <div class="col-75">
+              <input type="text" id="profile_location" name="location" placeholder="Location.." value="{{location}}">
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-25">
+              <label for="employer">Employer</label>
+          </div>
+          <div class="col-75">
+              <input type="text" id="profile_employer" name="employer" placeholder="Enter employer.." value="{{employer}}">
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-25">
+              <label for="job">Education</label>
+          </div>
+          <div class="col-75">
+              <input type="text" id="profile_education" name="education" placeholder="Enter education.." value="{{education}}">
+          </div>
+      </div>
+      
+      <div class="row">
+          <div class="col-75"></div>
+          <div class="col-25">
+               <button type="submit" data-id="{{id}}"><b>Submit</b></button>
+          </div>
+      </div>
+    </form>
   </div>
-</div>
-<!-- Page Content -->
-<div class="w3-padding-large" id="main">
-<h2>Edit Profile</h2>
-
-<div class="container">
-  <form  method="post" id="update-profile-form">
-    <div class="row">
-      <div class="col-25">
-        <label for="fname">First Name</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="profile_fname" name="firstname" placeholder="Your name.." value="{{first_name}}" required>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="lname">Last Name</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="profile_lname" name="lastname" placeholder="Your last name.." value="{{last_name}}" required>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="age">Age</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="profile_age" name="age" placeholder="Your age.." value="{{age}}" required>
-      </div>
-    </div>
-    <div class="row">
-        <div class="col-25">
-          <label for="description">Tell us about yourself</label>
-        </div>
-        <div class="col-75">
-          <textarea id="profile_description" name="description" placeholder="Write something.." value="{{bio}}" style="height:100px" required></textarea>
-        </div>
-    </div>
-    
-    <div class="row">
-        <div class="col-25">
-          <label for="technologies">Technologies</label>
-        </div>
-        <div class="col-75">
-            <input type="text" id="profile_technologies" name="technologies" placeholder="Technologies.." value="{{user_technology}}">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-25">
-          <label for="github">Github</label>
-        </div>
-        <div class="col-75">
-          <input type="text" id="profile_github" name="github" placeholder="Github.." value="{{github}}">
-        </div>
-    </div>
-   
-    <div class="row">
-        <div class="col-25">
-            <label for="location">Location</label>
-        </div>
-        <div class="col-75">
-            <input type="text" id="profile_location" name="location" placeholder="Location.." value="{{location}}">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-25">
-            <label for="employer">Employer</label>
-        </div>
-        <div class="col-75">
-            <input type="text" id="profile_employer" name="employer" placeholder="Enter employer.." value="{{employer}}">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-25">
-            <label for="job">Education</label>
-        </div>
-        <div class="col-75">
-            <input type="text" id="profile_education" name="education" placeholder="Enter education.." value="{{education}}">
-        </div>
-    </div>
-    
-    <div class="row">
-        <div class="col-75"></div>
-        <div class="col-25">
-             <button type="submit" data-id="{{id}}">Submit</button>
-        </div>
-    </div>
-  </form>
-</div>
-<!-- Portfolio Section -->
-  <div class="w3-padding-64 w3-content" id="projects">
-    <h2 class="w3-text-light-grey">My Projects</h2>
-    
-
-    <!-- Grid for photos -->
-   
-    <div class="w3-row-padding" style="margin:0 -16px">
-        <div class="row">
-             {{#each projects as |prj|}}
-            <div class="w3-col m4 d-flex align-items-stretch pcard">
-              <div class="card" >
-                <h3>{{prj.name}}</h3>
-                <p>{{prj.description}}</p>
-                <p>{{prj.link}}</p>
-                <p class="w3-wide">{{prj.project_technology}}</p>
-                
-              </div>
-            </div>
-             {{/each}}
-        </div>
-    <!-- End photo grid -->
-    </div>
-  <!-- End Portfolio Section -->
- 
+  <!-- Portfolio Section -->
+  
   </div>
 
-
-</div>
-
-<script type="template/handlebars" src="/public/js/editprofile.js"></script>
+<script type="template/handlebars" src="/js/editprofile.js"></script>

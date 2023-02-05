@@ -104,7 +104,7 @@ router.get('/editprofile/:id', async (req, res) => {
       const project = projectData.get({ plain: true });
       console.log(project);
       console.log(project.projects);
-      res.render('./partials/editprofile', {
+      res.render('./partials/edituser', {
         ...project,
         logged_in: req.session.loggedIn
       });
