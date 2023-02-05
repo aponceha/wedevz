@@ -66,8 +66,6 @@
 
 console.log("test click");
 const editProfileHandler = async (event) => {
-  
-  
     event.preventDefault();
     const fname = document.querySelector("#profile_fname").value.trim();
     const lname = document.querySelector("#profile_lname").value.trim();
