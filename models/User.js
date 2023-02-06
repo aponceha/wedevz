@@ -3,6 +3,7 @@ const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
 class User extends Model {
+  // BCRYPT DOES NOT WORK, FULLY IMPLEMENTED BUT CAUSES ERRORS
   // checkPassword(loginPwrd) {
   //   console.log("Login from checkPassword", loginPwrd);
   //   console.log(this.password);

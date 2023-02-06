@@ -12,7 +12,7 @@
   </header>
   <div class="col-75"></div>
   <div class="col-25">
-    <button class="w3-button w3-round-xxlarge w3-theme" onclick="openpage({{user_id}})">Edit Profile</button>
+    <button id="edit-prof-btn" onclick="document.location.replace('/editprofile/{{user_id}}');">Edit Profile</button>
   </div>
   <!-- About Section -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
@@ -73,18 +73,11 @@
   
     <!-- Footer -->
   <footer class="w3-content w3-padding-64 w3-text-grey w3-small">
-    
-    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+        <span class="text-muted">© 2023 WeDevz</span>
+
   <!-- End footer -->
   </footer>
 
 <!-- END PAGE CONTENT -->
 </div>
-
-<script>
-  function openpage(id) {
-       document.location.replace("/editprofile/"+id);
-  }
- 
-</script>
 

@@ -22,11 +22,10 @@
 <body class="bkgColor">
       {{#if loggedIn}} 
       <div class="sidebar navColor" id="navlist">
-            <a class ="btn" href="/exploreportfolio" style="font-size: 18px;"><i class="fa fa-home" style="font-size: 46px;"></i><br>HOME</a>
+            <a class ="btn" href="/homepage" style="font-size: 18px;"><i class="fa fa-home" style="font-size: 46px;"></i><br>HOME</a>
             <a class="btn" href="/profile/{{user_id}}" style="font-size: 18px;"><i class="fa fa-user" style="font-size: 46px;"></i><br>PROFILE</a>
-            <a class="btn" href="" style="font-size: 18px;"><i class="fa fa-th-list" style="font-size: 46px;"></i><br>PROJECT</a>
-            <a class="btn" href="" style="font-size: 18px;"><i class="fa fa-envelope" style="font-size: 46px;"></i><br>CONTACT</a>
-            <a class="btn" href="" style="font-size: 18px;"><i class="fa fa-sign-out" style="font-size: 46px;"></i><br>LOGOUT</a>
+            <a class="btn" href="/exploreportfolio" style="font-size: 18px;"><i class="fa fa-th-list" style="font-size: 46px;"></i><br>PROJECT</a>
+            <a class="btn" href="" style="font-size: 18px;" id="logout"><i class="fa fa-sign-out" style="font-size: 46px;"></i><br>LOGOUT</a>
       </div>
       {{/if}} 
       
@@ -34,9 +33,7 @@
       {{{ body }}}
     
    
-
-  {{!-- <script src="/js/navclick.js"></script> --}}
+<script src="/js/logout.js"></script>
 </body>
 
 </html>
-
