@@ -54,11 +54,14 @@ router.get("/", withAuth, async (req, res) => {
     const usergallery = userData.map((user) => user.get({ plain: true }));
     console.log(usergallery);
     // Render Explore Page
-    res.render("./partials/homepage", {
-      usergallery,
-      loggedIn: req.session.loggedIn,
-      user_id: req.session.user_id
-    });
+   
+      res.render("./partials/homepage", {
+        usergallery,
+        loggedIn: req.session.loggedIn,
+        user_id: req.session.user_id
+      });
+
+    
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
